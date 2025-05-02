@@ -20,6 +20,7 @@ Before installing these dotfiles, ensure you have the following packages install
 | rofi                                 | A window switcher, run dialog, ssh-launcher and dmenu replacement. |
 | waybar                               | A highly customizable Wayland bar.                                 |
 | lxqt-policykit (or anything similar) | A GUI policy kit authentification agent.                               |
+
 **\* A GUI policy kit authentification agent is required ONLY if you want to use the Rofi charge limit menu. You can use any other agent you prefer.**
 
 For my setup, I used the **Adwaita fonts** (for most of the setup) and the **Nerd fonts** (for symbols and icons). You can choose to either install those or configure the fonts in the configuration files to your desires.
