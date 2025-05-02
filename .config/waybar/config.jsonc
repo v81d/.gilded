@@ -1,0 +1,165 @@
+// -*- mode: jsonc -*-
+{
+    // Bar configuration
+    "layer": "bottom",
+    "position": "top",
+    "spacing": 5,
+    
+    // Module positioning
+    "modules-left": ["custom/os", "hyprland/window"],
+    "modules-center": ["hyprland/workspaces", "clock"],
+    "modules-right": [
+        "hyprland/language",
+        "network",
+        "backlight",
+        "pulseaudio",
+        "power-profiles-daemon",
+        "battery"
+    ],
+    
+    // Left modules
+    "custom/os": {
+        "exec": "echo ''",
+        "format": "<span foreground='#ebdbb2'>{}</span>",
+        "tooltip": false,
+        "on-click": "rofi -show drun -normal-window -show-icons"
+    },
+    
+    "hyprland/window": {
+        "format": "{class}",
+        "icon": true,
+        "icon-size": 12,
+        "rewrite": {
+            "": "󰧨    Desktop"
+        },
+        "tooltip": false
+    },
+    
+    // Center modules
+    "hyprland/workspaces": {
+        "disable-scroll": true,
+        "on-click": "activate",
+        "format": "{name}",
+        "format-activated": "{name}",
+        "format-urgent": "{name}"
+    },
+    
+    "clock": {
+        "format": "󰃭   {:%a %b %d    %H:%M}",
+        "tooltip": false
+    },
+    
+    // Right modules
+    "hyprland/language": {
+        "format": "󰧹    {}"
+    },
+    
+    "network": {
+        "format-disconnected": "󰤮    Disconnected",
+        "format-wifi": "{icon}    {essid}",
+        "format-ethernet": "    {ipaddr}/{cidr}",
+        "format-icons": [
+            "󰤯",
+            "󰤟",
+            "󰤢",
+            "󰤥",
+            "󰤨"
+        ],
+        "tooltip": false,
+        "on-click": "bash ~/.config/rofi/scripts/wifi.sh"
+    },
+    
+    "backlight": {
+        "device": "intel_backlight",
+        "format": "{icon}    {percent}%",
+        "format-icons": [
+            "󱩎",
+            "󱩏",
+            "󱩐",
+            "󱩑",
+            "󱩒",
+            "󱩓",
+            "󱩔",
+            "󱩕",
+            "󱩖",
+            "󰛨"
+        ],
+        "on-scroll-up": "brightnessctl set 2%+",
+        "on-scroll-down": "brightnessctl set 2%-",
+        "tooltip": false
+    },
+    
+    "pulseaudio": {
+        "format": "{icon}  {volume}%",
+        "format-muted": "󰝟   Muted",
+        "format-icons": {
+            "headphone": "",
+            "default": [
+                "󰕿",
+                "󰖀",
+                "󰕾"
+            ]
+        },
+        "on-click": "pavucontrol",
+        "on-click-middle": "wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle",
+        "on-scroll-up": "wpctl set-volume -l 1 @DEFAULT_AUDIO_SINK@ 2%+",
+        "on-scroll-down": "wpctl set-volume @DEFAULT_AUDIO_SINK@ 2%-"
+    },
+    
+    "power-profiles-daemon": {
+        "format": "{icon}",
+        "tooltip-format": "Power Profile: {profile}\nDriver: {driver}",
+        "tooltip": true,
+        "format-icons": {
+            "performance": "󱊣  Performance",
+            "balanced": "󱊢  Balanced",
+            "power-saver": "󱊡  Power Saver"
+        }
+    },
+    
+    "battery": {
+        "states": {
+            "good": 80,
+            "warning": 20,
+            "critical": 10
+        },
+        "interval": 5,
+        "format": "{icon}  {capacity}%",
+        "format-icons": {
+            "charging": [
+                "󰢜 ",
+                "󰂆 ",
+                "󰂇 ",
+                "󰂈 ",
+                "󰢝 ",
+                "󰂉 ",
+                "󰢞 ",
+                "󰂊 ",
+                "󰂋 ",
+                "󰂅 "
+            ],
+            "default": [
+                "󰁺",
+                "󰁻",
+                "󰁼",
+                "󰁽",
+                "󰁾",
+                "󰁿",
+                "󰂀",
+                "󰂁",
+                "󰂂",
+                "󰁹"
+            ]
+        }
+    },
+    
+    // Additional modules
+    "cpu": {
+        "format": "󰻠   {usage}%",
+        "tooltip": false
+    },
+    
+    "memory": {
+        "format": "   {}%"
+    }
+}

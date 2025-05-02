@@ -1,0 +1,109 @@
+/*
+ * Gilded theme created by v81d
+ * Inspired by Gruvbox and Adwaita
+ */
+
+* {
+    min-height: 0;
+    border: none;
+    font-family: Adwaita Sans;
+    font-weight: bold;
+    font-size: 12px;
+    transition: background 500ms ease;
+    box-shadow: none;
+}
+
+window#waybar {
+    background: none;
+}
+
+#custom-os {
+    margin-top: 20px;
+    margin-left: 20px;
+    margin-right: 10px;
+    padding-left: 15px;
+    padding-right: 15px;
+    border-radius: 12px;
+    background: rgba(105, 91, 72, 0.6);
+    color: #ebdbb2;
+}
+
+/* Workspaces container */
+#workspaces {
+    margin-top: 20px;
+    margin-right: 10px;
+    padding: 5px 8px 5px 0;
+    border-radius: 12px;
+    background: rgba(105, 91, 72, 0.6);
+}
+
+/* Individual workspace buttons */
+#workspaces button {
+    margin-left: 8px;
+    border-radius: 12px;
+    color: #b59b81;
+    transition: all 500ms ease;
+}
+
+/* Active workspace */
+#workspaces button.active {
+    color: #ebdbb2;
+}
+
+/* Urgent workspace */
+#workspaces button.urgent {
+    color: #cc241d;
+}
+
+/* Common module styling for various elements */
+#window,
+#power-profiles-daemon,
+#backlight,
+#clock,
+#pulseaudio,
+#network,
+#cpu,
+#memory,
+#language,
+#battery {
+    margin-top: 20px;
+    margin-right: 10px;
+    padding-left: 15px;
+    padding-right: 15px;
+    border-radius: 12px;
+    background: rgba(105, 91, 72, 0.6);
+    color: #ebdbb2;
+}
+
+/* Hover effect for clickable modules */
+#custom-logo:hover,
+#workspaces button:hover,
+#power-profiles-daemon:hover,
+#pulseaudio:hover,
+#network:hover {
+    background: rgba(163, 139, 106, 0.6);
+}
+
+#battery {
+    margin-right: 20px;
+}
+
+#battery.charging,
+#battery.plugged {
+    background: rgba(199, 139, 56, 0.4);
+}
+
+@keyframes blink {
+    to {
+        background: none;
+    }
+}
+
+#battery.critical:not(.charging) {
+    background: #cc241d;
+    animation-name: blink;
+    animation-duration: 500ms;
+    animation-timing-function: steps(50);
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
