@@ -3,7 +3,8 @@
 A collection of my personal dotfiles and configurations for a sleek and minimalistic Linux desktop using [Hyprland](https://hyprland.org/).
 
 ![Desktop Screenshot](./screenshots/1.png)
-![Rofi Launcher Screenshot](./screenshots/2.png)
+![Rofi App Launcher Screenshot](./screenshots/2.png)
+![Rofi Charge Menu Launcher Screenshot](./screenshots/2.png)
 
 ## 🛠️ Installation
 

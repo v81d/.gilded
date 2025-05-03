@@ -27,6 +27,7 @@
     
     "hyprland/window": {
         "format": "{title}",
+        "max-length": 40,
         "icon": true,
         "icon-size": 12,
         "rewrite": {
