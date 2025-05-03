@@ -6,7 +6,7 @@
 * {
     min-height: 0;
     border: none;
-    font-family: Adwaita Sans;
+    font-family: "Adwaita Sans", "Noto Sans CJK SC", "Noto Sans CJK TC", "Noto Sans CJK JP", "Noto Sans CJK KR", "Noto Color Emoji", sans-serif;
     font-weight: bold;
     font-size: 12px;
     transition: background 500ms ease;
