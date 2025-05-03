@@ -32,8 +32,8 @@ I also used the [Gruvbox Plus Icon Pack by SylEleuth](https://github.com/SylEleu
 1. Clone this repository and open it locally.
 
 ```bash
-git clone https://github.com/v81d/.gilded.git ~/.gilded
-cd ~/.gilded
+git clone https://github.com/v81d/.gilded.git ~/gilded
+cd ~/gilded
 ```
 
 2. Backup your current dotfiles if necessary (optional).
