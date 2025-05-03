@@ -1,3 +1,4 @@
+
 # ✨ .gilded
 
 A collection of my personal dotfiles and configurations for a sleek and minimalistic Linux desktop using [Hyprland](https://hyprland.org/).
@@ -21,6 +22,8 @@ Before installing these dotfiles, ensure you have the following packages install
 | rofi                                 | A window switcher, run dialog, ssh-launcher and dmenu replacement. |
 | waybar                               | A highly customizable Wayland bar.                                 |
 | lxqt-policykit (or anything similar) | A GUI policy kit authentification agent.                               |
+| hyprpaper | A wallpaper utility for Hyprland.                               |
+| brightnessctl | A brightness reader and controller for Linux systems.                               |
 
 **\* A GUI policy kit authentification agent is required ONLY if you want to use the Rofi charge limit menu. You can use any other agent you prefer.**
 
