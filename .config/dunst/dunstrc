@@ -26,19 +26,19 @@
     format = "<b>%s</b>\n%b"
 
 [urgency_low]
-    background = "#907053"
+    background = "#695B4899"
     foreground = "#ffdeb0"
     frame_color = "#ffdeb0"
     timeout = 5
 
 [urgency_normal]
-    background = "#907053"
+    background = "#695B4899"
     foreground = "#ffdeb0"
     frame_color = "#ffdeb0"
     timeout = 5
 
 [urgency_critical]
-    background = "#905353"
+    background = "#90535399"
     foreground = "#ffb0b0"
     frame_color = "#ffb0b0"
     timeout = 10
