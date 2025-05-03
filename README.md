@@ -1,4 +1,4 @@
-# ✨ Gilded Dotfiles
+# ✨ .Gilded
 
 A collection of my personal dotfiles and configurations for a sleek and minimalistic Linux desktop using [Hyprland](https://hyprland.org/).
 
