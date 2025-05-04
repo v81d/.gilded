@@ -11,7 +11,6 @@
     "modules-right": [
         "hyprland/language",
         "network",
-        "backlight",
         "pulseaudio",
         "power-profiles-daemon",
         "battery"
@@ -68,26 +67,6 @@
         ],
         "tooltip": false,
         "on-click": "bash ~/.config/rofi/scripts/wifi.sh"
-    },
-    
-    "backlight": {
-        "device": "intel_backlight",
-        "format": "{icon}    {percent}%",
-        "format-icons": [
-            "󱩎",
-            "󱩏",
-            "󱩐",
-            "󱩑",
-            "󱩒",
-            "󱩓",
-            "󱩔",
-            "󱩕",
-            "󱩖",
-            "󰛨"
-        ],
-        "on-scroll-up": "brightnessctl set 2%+",
-        "on-scroll-down": "brightnessctl set 2%-",
-        "tooltip": false
     },
     
     "pulseaudio": {

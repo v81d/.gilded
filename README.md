@@ -13,19 +13,19 @@ A collection of my personal dotfiles and configurations for a sleek and minimali
 
 Before installing these dotfiles, check for the packages below. Of course, you do **not** need to use the exact same set of packages; however, if you choose to exclude some of these packages, you must modify the configuration files to align with your setup.
 
-
-| Package                              | Description                                                        |
-| -------------------------------------- | -------------------------------------------------------------------- |
-| dunst                                | A lightweight notification daemon.                                 |
-| hyprland                             | A Wayland-based tiling window manager.                             |
-| kitty                                | A fast GPU-based terminal emulator.                                |
-| rofi                                 | A window switcher, run dialog, ssh-launcher and dmenu replacement. |
-| waybar                               | A highly customizable Wayland bar.                                 |
-| lxqt-policykit (or anything similar) | A GUI policy kit authentification agent.                               |
-| hyprpaper | A wallpaper utility for Hyprland.                               |
-| brightnessctl | A brightness reader and controller for Linux systems.                               |
-| slurp | A tool to select a region in a Wayland compositor.                               |
-| grim | A tool to grab images from a Wayland compositor.                               |
+| Package                              | Description                                                          |
+| -------------------------------------| ---------------------------------------------------------------------|
+| dunst                                | A lightweight notification daemon.                                   |
+| hyprland                             | A Wayland-based tiling window manager.                               |
+| kitty                                | A fast GPU-based terminal emulator.                                  |
+| rofi                                 | A window switcher, run dialog, ssh-launcher and dmenu replacement.   |
+| waybar                               | A highly customizable Wayland bar.                                   |
+| lxqt-policykit (or anything similar) | A GUI policy kit authentification agent.                             |
+| hyprpaper                            | A wallpaper utility for Hyprland.                                    |
+| brightnessctl                        | A brightness reader and controller for Linux systems.                |
+| slurp                                | A tool to select a region in a Wayland compositor.                   |
+| grim                                 | A tool to grab images from a Wayland compositor.                     |
+| fastfetch                            | A tool for fetching and displaying system information in a terminal. |
 
 **\* A GUI policy kit authentification agent is required ONLY if you want to use the Rofi charge limit menu. You can use any other agent you prefer. If you do NOT use a policy kit agent, make sure to adjust the necessary settings in `hyprland.conf`.**
 
@@ -65,7 +65,7 @@ sudo reboot
 
 6. Thoroughly review your configuration files and ensure that there are no errors.
 
-## 🔋 Battery Charge Threshold Service
+## 🔋 Battery Charge Threshold (Integration with Rofi)
 
 I included this service here in case anyone would like to use it. Below are the instructions to install.
 
