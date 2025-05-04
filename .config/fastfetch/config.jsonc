@@ -3,7 +3,7 @@
     "logo": {
         "source": "~/.config/fastfetch/logo.txt",
         "color": {
-            "1": "0"
+            "1": "default"
         }
     },
     "modules": [
