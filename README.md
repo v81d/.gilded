@@ -11,7 +11,7 @@ A collection of my personal dotfiles and configurations for a sleek and minimali
 
 ### Prerequisites
 
-Before installing these dotfiles, ensure you have the following packages installed:
+Before installing these dotfiles, check for the packages below. Of course, you do **not** need to use the exact same set of packages; however, if you choose to exclude some of these packages, you must modify the configuration files to align with your setup.
 
 
 | Package                              | Description                                                        |
@@ -24,8 +24,10 @@ Before installing these dotfiles, ensure you have the following packages install
 | lxqt-policykit (or anything similar) | A GUI policy kit authentification agent.                               |
 | hyprpaper | A wallpaper utility for Hyprland.                               |
 | brightnessctl | A brightness reader and controller for Linux systems.                               |
+| slurp | A tool to select a region in a Wayland compositor.                               |
+| grim | A tool to grab images from a Wayland compositor.                               |
 
-**\* A GUI policy kit authentification agent is required ONLY if you want to use the Rofi charge limit menu. You can use any other agent you prefer.**
+**\* A GUI policy kit authentification agent is required ONLY if you want to use the Rofi charge limit menu. You can use any other agent you prefer. If you do NOT use a policy kit agent, make sure to adjust the necessary settings in `hyprland.conf`.**
 
 For my setup, I used the **Adwaita** fonts (for most of the setup), the **Nerd** fonts (for symbols and icons), and **Noto** fonts (to display other characters). You can choose to either install those or configure the fonts in the configuration files to your desires.
 
@@ -48,6 +50,7 @@ cp -r ~/.config/* ~/.config/.backup/
 ```
 
 3. Install any necessary fonts, themes, or icons mentioned above.
+
 4. Copy the configuration files from the repository to the `~/.config` folder. Create it if it does not exist yet.
 
 ```bash
@@ -59,6 +62,8 @@ cp -r ./.config/* ~/.config/
 ```bash
 sudo reboot
 ```
+
+6. Thoroughly review your configuration files and ensure that there are no errors.
 
 ## 🔋 Battery Charge Threshold Service
 
