@@ -3,105 +3,110 @@
  */
 
  * {
-    min-height: 0;
-    border: none;
-    font-family: "Adwaita Sans", sans-serif;
-    font-weight: bold;
-    font-size: 12px;
-    transition: background 500ms ease;
-    box-shadow: none;
+    /* Base colors */
+    background-main: #282828;
+    background-alt: #32302f;
+    background-highlight: #473c32;
+    foreground-main: #d4be98;
+
+    /* Accent colors */
+    accent-blue: #7daea3;
+    accent-red: #ea6962;
+    accent-orange: #e78a4e;
+    accent-green: #a9b665;
+    accent-gold: #ffdeb0;
+
+    /* Default styling */
+    background-color: @background-main;
 }
 
-window#waybar {
-    background: none;
+window {
+    height: 400px;
+    width: 600px;
 }
 
-#custom-os {
-    margin-top: 20px;
-    margin-left: 20px;
-    margin-right: 5px;
-    padding-left: 15px;
-    padding-right: 15px;
+mainbox {
+    spacing: 0px;
+    children: [inputbar, message, listview];
+}
+
+inputbar {
+    color: @foreground-main;
+    padding: 14px;
+    background-color: @background-main;
+}
+
+message {
+    padding: 10px;
+    background-color: @background-highlight;
+}
+
+listview {
+    padding: 8px;
+    background-color: @background-main;
+    dynamic: false;
+}
+
+textbox {
+    text-color: @foreground-main;
+    background-color: inherit;
+}
+
+error-message {
+    border: 20px 20px 20px 20px;
+}
+
+entry,
+prompt,
+case-indicator {
+    text-color: inherit;
+}
+
+prompt {
+    margin: 0px 10px 0px 0px;
+}
+
+element {
+    padding: 12px;
+    vertical-align: 0.5;
     border-radius: 12px;
-    background: rgba(105, 91, 72, 0.6);
-    color: #ebdbb2;
 }
 
-/* Workspaces container */
-#workspaces {
-    margin-top: 20px;
-    margin-right: 5px;
-    padding: 5px 5px 5px 0;
-    border-radius: 12px;
-    background: rgba(105, 91, 72, 0.6);
+element.selected.normal {
+    background-color: @background-highlight;
 }
 
-/* Individual workspace buttons */
-#workspaces button {
-    margin-left: 5px;
-    border-radius: 12px;
-    color: #b59b81;
-    transition: all 500ms ease;
+element.normal.active,
+element.alternate.active {
+    background-color: @accent-orange;
 }
 
-/* Active workspace */
-#workspaces button.active {
-    color: #ebdbb2;
+element.selected.active {
+    background-color: @accent-green;
 }
 
-/* Urgent workspace */
-#workspaces button.urgent {
-    color: #cc241d;
+element.normal.urgent,
+element.alternate.urgent {
+    background-color: @accent-red;
 }
 
-/* Common module styling for various elements */
-#window,
-#power-profiles-daemon,
-#clock,
-#pulseaudio,
-#network,
-#cpu,
-#memory,
-#language,
-#battery {
-    margin-top: 20px;
-    margin-right: 5px;
-    padding-left: 15px;
-    padding-right: 15px;
-    border-radius: 12px;
-    background: rgba(105, 91, 72, 0.6);
-    color: #ebdbb2;
+element.selected.urgent {
+    background-color: @accent-blue;
 }
 
-/* Hover effect for clickable modules */
-#custom-logo:hover,
-#workspaces button:hover,
-#power-profiles-daemon:hover,
-#pulseaudio:hover,
-#network:hover {
-    background: rgba(163, 139, 106, 0.6);
+element-text,
+element-icon {
+    size: 32px;
+    vertical-align: 0.5;
+    background-color: inherit;
+    text-color: @foreground-main;
 }
 
-#battery {
-    margin-right: 20px;
+element-icon {
+    margin: 0px 10px 0px 0px;
 }
 
-#battery.charging,
-#battery.plugged {
-    background: rgba(199, 139, 56, 0.4);
-}
-
-@keyframes blink {
-    to {
-        background: none;
-    }
-}
-
-#battery.critical:not(.charging) {
-    background: #cc241d;
-    animation-name: blink;
-    animation-duration: 500ms;
-    animation-timing-function: steps(50);
-    animation-iteration-count: infinite;
-    animation-direction: alternate;
+element-text .active,
+element-text .urgent {
+    text-color: @background-main;
 }

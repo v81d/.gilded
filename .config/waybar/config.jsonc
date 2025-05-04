@@ -73,8 +73,8 @@
         "format": "{icon}  {volume}%",
         "format-muted": "󰝟   Muted",
         "format-icons": {
-            "headphone": "",
-            "default": [
+            "headset": "󰋎",
+            "speaker": [
                 "󰕿",
                 "󰖀",
                 "󰕾"

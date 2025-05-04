@@ -13,34 +13,28 @@ A collection of my personal dotfiles and configurations for a sleek and minimali
 
 Before installing these dotfiles, check for the packages below. Of course, you do **not** need to use the exact same set of packages; however, if you choose to exclude some of these packages, you must modify the configuration files to align with your setup.
 
-| Package                              | Description                                                          |
-| -------------------------------------| ---------------------------------------------------------------------|
-| dunst                                | A lightweight notification daemon.                                   |
-| hyprland                             | A Wayland-based tiling window manager.                               |
-| kitty                                | A fast GPU-based terminal emulator.                                  |
-| rofi                                 | A window switcher, run dialog, ssh-launcher and dmenu replacement.   |
-| waybar                               | A highly customizable Wayland bar.                                   |
-| lxqt-policykit (or anything similar) | A GUI policy kit authentification agent.                             |
-| hyprpaper                            | A wallpaper utility for Hyprland.                                    |
-| brightnessctl                        | A brightness reader and controller for Linux systems.                |
-| slurp                                | A tool to select a region in a Wayland compositor.                   |
-| grim                                 | A tool to grab images from a Wayland compositor.                     |
-| fastfetch                            | A tool for fetching and displaying system information in a terminal. |
+| Package                              | Description                                                                 |
+|--------------------------------------|-----------------------------------------------------------------------------|
+| **dunst**                            | Minimal and customizable notification daemon for X11 and Wayland environments. |
+| **hyprland**                         | Dynamic tiling Wayland compositor with modern effects and flexible configuration. |
+| **kitty**                            | A GPU-accelerated terminal emulator focused on speed, features, and readability. |
+| **rofi**                             | Versatile launcher used for app switching, commands, and more. |
+| **waybar**                           | A sleek and modular status bar for Wayland compositors like Sway and Hyprland. |
+| **lxqt-policykit**                   | Graphical authentication agent for managing privileged actions in a desktop environment. |
+| **hyprpaper**                        | Lightweight wallpaper manager designed specifically for Hyprland. |
+| **brightnessctl**                    | Command-line utility to read and adjust screen brightness using sysfs. |
+| **slurp**                            | Region selection tool for Wayland, ideal for screenshot or screen recording workflows. |
+| **grim**                             | Screenshot utility for Wayland, often paired with slurp for precise region capture. |
+| **fastfetch**                        | Blazing-fast system info tool for the terminal, with customizable ASCII logos. |
+| **bc**                               | Precision-friendly command-line calculator for complex and floating-point math. |
 
 **\* A GUI policy kit authentification agent is required ONLY if you want to use the Rofi charge limit menu. You can use any other agent you prefer. If you do NOT use a policy kit agent, make sure to adjust the necessary settings in `hyprland.conf`.**
 
 For my setup, I used the **Adwaita** fonts (for most of the setup), the **Nerd** fonts (for symbols and icons), and **Noto** fonts (to display other characters). You can choose to either install those or configure the fonts in the configuration files to your desires.
 
-I also used the [Gruvbox Plus Icon Pack by SylEleuth](https://github.com/SylEleuth/gruvbox-plus-icon-pack). **If you choose to use another icon pack, adjust the section below in `hyprland.conf` to ensure that your icons are being displayed correctly in the notifications.** If you DO choose to use this icon pack, make sure that it is plaecd in `~/.local/share/icons`.
+I also used the [Gruvbox Plus Icon Pack by SylEleuth](https://github.com/SylEleuth/gruvbox-plus-icon-pack). This is not necessary for the configuration, however.
 
-```conf
-# Laptop multimedia keys for volume and LCD brightness
-bindel = , XF86AudioRaiseVolume, exec, bash -c 'ICON=$(wpctl get-volume @DEFAULT_AUDIO_SINK@ | grep -q MUTED && echo ~/.local/share/icons/Gruvbox-Plus-Dark/status/48/notification-audio-volume-muted.svg || echo ~/.local/share/icons/Gruvbox-Plus-Dark/status/48/notification-audio-volume-high.svg); wpctl set-volume -l 1 @DEFAULT_AUDIO_SINK@ 2%+; VOL=$(wpctl get-volume @DEFAULT_AUDIO_SINK@ | awk '"'"'{print int($2 * 100)}'"'"'); FILLED=$((VOL / 10)); EMPTY=$((10 - FILLED)); BAR=""; for i in $(seq 1 $FILLED); do BAR+="█"; done; for i in $(seq 1 $EMPTY); do BAR+="░"; done; dunstify -r 9993 -t 1000 -i "$ICON" "Volume" "$BAR $VOL%"'
-bindel = , XF86AudioLowerVolume, exec, bash -c 'ICON=$(wpctl get-volume @DEFAULT_AUDIO_SINK@ | grep -q MUTED && echo ~/.local/share/icons/Gruvbox-Plus-Dark/status/48/notification-audio-volume-muted.svg || echo ~/.local/share/icons/Gruvbox-Plus-Dark/status/48/notification-audio-volume-medium.svg); wpctl set-volume @DEFAULT_AUDIO_SINK@ 2%-; VOL=$(wpctl get-volume @DEFAULT_AUDIO_SINK@ | awk '"'"'{print int($2 * 100)}'"'"'); FILLED=$((VOL / 10)); EMPTY=$((10 - FILLED)); BAR=""; for i in $(seq 1 $FILLED); do BAR+="█"; done; for i in $(seq 1 $EMPTY); do BAR+="░"; done; dunstify -r 9993 -t 1000 -i "$ICON" "Volume" "$BAR $VOL%"'
-bindel = , XF86AudioMute, exec, bash -c 'MUTED=$(wpctl get-volume @DEFAULT_AUDIO_SINK@ | grep -q MUTED && echo "Unmuted" || echo "Muted"); ICON=$(wpctl get-volume @DEFAULT_AUDIO_SINK@ | grep -q MUTED && echo ~/.local/share/icons/Gruvbox-Plus-Dark/status/48/notification-audio-volume-high.svg || echo ~/.local/share/icons/Gruvbox-Plus-Dark/status/48/notification-audio-volume-muted.svg); dunstify -r 9993 -t 1000 -i "$ICON" "Volume" "$MUTED"; wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle'
-bindel = , XF86MonBrightnessUp, exec, bash -c 'brightnessctl set 2%+; VAL=$(brightnessctl get); MAX=$(brightnessctl max); PERC=$((VAL * 100 / MAX)); FILLED=$((PERC / 10)); EMPTY=$((10 - FILLED)); BAR=""; for i in $(seq 1 $FILLED); do BAR+="█"; done; for i in $(seq 1 $EMPTY); do BAR+="░"; done; dunstify -r 9994 -t 1000 -i ~/.local/share/icons/Gruvbox-Plus-Dark/status/48/notification-display-brightness.svg "Brightness" "$BAR $PERC%"'
-bindel = , XF86MonBrightnessDown, exec, bash -c 'brightnessctl set 2%-; VAL=$(brightnessctl get); MAX=$(brightnessctl max); PERC=$((VAL * 100 / MAX)); FILLED=$((PERC / 10)); EMPTY=$((10 - FILLED)); BAR=""; for i in $(seq 1 $FILLED); do BAR+="█"; done; for i in $(seq 1 $EMPTY); do BAR+="░"; done; dunstify -r 9994 -t 1000 -i ~/.local/share/icons/Gruvbox-Plus-Dark/status/48/notification-display-brightness.svg "Brightness" "$BAR $PERC%"'
-```
+Credits to Nicholas Anand for the original [Dunst Media and Brightness Notifications](https://gitlab.com/Nmoleo/i3-volume-brightness-indicator) script. This script has been modified to align with the standards of this configuration.
 
 ### Manual Install
 
