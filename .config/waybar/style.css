@@ -3,7 +3,7 @@
  * Inspired by Gruvbox and Adwaita
  */
 
-* {
+ * {
     min-height: 0;
     border: none;
     font-family: "Adwaita Sans", sans-serif;
@@ -20,7 +20,7 @@ window#waybar {
 #custom-os {
     margin-top: 20px;
     margin-left: 20px;
-    margin-right: 10px;
+    margin-right: 5px;
     padding-left: 15px;
     padding-right: 15px;
     border-radius: 12px;
@@ -31,15 +31,15 @@ window#waybar {
 /* Workspaces container */
 #workspaces {
     margin-top: 20px;
-    margin-right: 10px;
-    padding: 5px 8px 5px 0;
+    margin-right: 5px;
+    padding: 5px 5px 5px 0;
     border-radius: 12px;
     background: rgba(105, 91, 72, 0.6);
 }
 
 /* Individual workspace buttons */
 #workspaces button {
-    margin-left: 8px;
+    margin-left: 5px;
     border-radius: 12px;
     color: #b59b81;
     transition: all 500ms ease;
@@ -58,7 +58,6 @@ window#waybar {
 /* Common module styling for various elements */
 #window,
 #power-profiles-daemon,
-#backlight,
 #clock,
 #pulseaudio,
 #network,
@@ -67,7 +66,7 @@ window#waybar {
 #language,
 #battery {
     margin-top: 20px;
-    margin-right: 10px;
+    margin-right: 5px;
     padding-left: 15px;
     padding-right: 15px;
     border-radius: 12px;
