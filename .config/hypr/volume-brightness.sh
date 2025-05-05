@@ -3,7 +3,7 @@
 # Original script created by Nicholas Anand: https://gitlab.com/Nmoleo/i3-volume-brightness-indicator
 
 volume_step=0.02
-brightness_step=5
+brightness_step=4
 max_volume=1.00
 notification_timeout=1500
 download_media_art=true
@@ -139,7 +139,7 @@ case $1 in
         percent=$(printf "%.0f" "$(echo "$current_brightness / $max_brightness * 100" | bc -l)")
 
         if (( percent <= brightness_step )); then
-            brightnessctl set 1%
+            brightnessctl set 0%
         else
             brightnessctl set ${brightness_step}%-
         fi
