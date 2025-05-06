@@ -5,7 +5,10 @@ A collection of my personal dotfiles and configurations for a sleek and minimali
 
 ![Desktop Screenshot](./screenshots/1.png)
 ![Rofi App Launcher Screenshot](./screenshots/2.png)
-![Rofi Charge Menu Launcher Screenshot](./screenshots/2.png)
+![Rofi Charge Menu Launcher Screenshot](./screenshots/3.png)
+![Hyprlock Screenshot](./screenshots/4.png)
+
+> The last screenshot appears worse than it really is. Unfortunately, I was unable to take a screenshot of the lockscreen and had to resort to taking a cropped photo. I will post an actual screenshot when I have the time.
 
 ## 🛠️ Installation
 
@@ -27,6 +30,7 @@ Before installing these dotfiles, check for the packages below. Of course, you d
 | **grim**                             | Screenshot utility for Wayland, often paired with slurp for precise region capture. |
 | **fastfetch**                        | Blazing-fast system info tool for the terminal, with customizable ASCII logos. |
 | **bc**                               | Precision-friendly command-line calculator for complex and floating-point math. |
+| **hyprlock**                         | A highly customizable GPU-accelerated screen lock for Hyprland. |
 
 **\* A GUI policy kit authentification agent is required ONLY if you want to use the Rofi charge limit menu. You can use any other agent you prefer. If you do NOT use a policy kit agent, make sure to adjust the necessary settings in `hyprland.conf`.**
 
@@ -66,7 +70,13 @@ cp -r ./.config/* ~/.config/
 sudo reboot
 ```
 
-6. Thoroughly review your configuration files and ensure that there are no errors.
+6. Thoroughly review your configuration files and adjust settings as needed.
+
+> Make sure to change paths and file directories to align with your setup. For example, if you are using the .gilded Hyprlock theme, edit the `path` variable under the `image` module.
+> 
+> ```conf
+> path = $HOME/Pictures/Profile Pictures/Aerial Mountains.jpg # Replace with the path to your profile picture
+> ```
 
 ## 🔋 Battery Charge Threshold (Integration with Rofi)
 
