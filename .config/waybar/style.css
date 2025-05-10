@@ -62,13 +62,10 @@ window#waybar {
 
 /* Common module styling for various elements */
 #window,
-#power-profiles-daemon,
 #mpris,
 #clock,
 #pulseaudio,
 #network,
-#cpu,
-#memory,
 #language,
 #battery {
     margin-top: 20px;
@@ -84,10 +81,10 @@ window#waybar {
 #custom-logo:hover,
 #workspaces button:hover,
 #mpris:hover,
-#power-profiles-daemon:hover,
 #pulseaudio:hover,
-#network:hover {
-    background: rgba(163, 139, 106, 0.2);
+#network:hover,
+#battery:hover {
+    background: rgba(163, 139, 106, 0.4);
 }
 
 #battery {

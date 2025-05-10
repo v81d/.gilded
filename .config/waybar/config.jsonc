@@ -12,7 +12,6 @@
         "hyprland/language",
         "network",
         "pulseaudio",
-        "power-profiles-daemon",
         "battery"
     ],
     
@@ -93,17 +92,6 @@
         "on-scroll-down": "wpctl set-volume @DEFAULT_AUDIO_SINK@ 2%-"
     },
     
-    "power-profiles-daemon": {
-        "format": "{icon}",
-        "tooltip-format": "Power Profile: {profile}\nDriver: {driver}",
-        "tooltip": true,
-        "format-icons": {
-            "performance": "󱊣  Performance",
-            "balanced": "󱊢  Balanced",
-            "power-saver": "󱊡  Power Saver"
-        }
-    },
-    
     "battery": {
         "states": {
             "good": 80,
@@ -137,16 +125,7 @@
                 "󰂂",
                 "󰁹"
             ]
-        }
-    },
-    
-    // Additional modules
-    "cpu": {
-        "format": "󰻠   {usage}%",
-        "tooltip": false
-    },
-    
-    "memory": {
-        "format": "   {}%"
+        },
+        "on-click": "bash ~/.config/rofi/scripts/profile.sh"
     }
 }

@@ -1,8 +1,11 @@
 #!/bin/bash
 
-CHOICE=$(echo -e "Logout\nSuspend\nReboot\nShutdown" | rofi -dmenu -i -p "Power" -normal-window)
+CHOICE=$(echo -e "Lock\nLogout\nSuspend\nReboot\nShutdown" | rofi -dmenu -i -p "Power" -normal-window)
 
 case "$CHOICE" in
+    "Lock")
+        hyprlock &
+        ;;
     "Logout")
         hyprctl dispatch exit
         ;;
