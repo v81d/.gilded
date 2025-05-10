@@ -10,6 +10,7 @@
     font-size: 12px;
     transition: background 500ms ease;
     box-shadow: none;
+    text-shadow: none;
 }
 
 window#waybar {
@@ -38,15 +39,20 @@ window#waybar {
 
 /* Individual workspace buttons */
 #workspaces button {
+    padding-left: 5px;
+    padding-right: 5px;
     margin-left: 5px;
     border-radius: 12px;
-    color: #b59b81;
+    color: #9c8c5f;
     transition: all 500ms ease;
 }
 
 /* Active workspace */
 #workspaces button.active {
     color: #ebdbb2;
+    padding-left: 15px;
+    padding-right: 15px;
+    background: rgba(163, 139, 106, 0.4);
 }
 
 /* Urgent workspace */
@@ -57,6 +63,7 @@ window#waybar {
 /* Common module styling for various elements */
 #window,
 #power-profiles-daemon,
+#mpris,
 #clock,
 #pulseaudio,
 #network,
@@ -76,10 +83,11 @@ window#waybar {
 /* Hover effect for clickable modules */
 #custom-logo:hover,
 #workspaces button:hover,
+#mpris:hover,
 #power-profiles-daemon:hover,
 #pulseaudio:hover,
 #network:hover {
-    background: rgba(163, 139, 106, 0.6);
+    background: rgba(163, 139, 106, 0.2);
 }
 
 #battery {

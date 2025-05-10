@@ -63,7 +63,7 @@ function show_volume_notif {
     get_volume_icon
 
     if [[ $show_media_in_volume_indicator == "true" ]]; then
-        current_media=$(playerctl -f "{{artist}} - {{title}}" metadata)
+        current_media=$(playerctl -f "{{artist}} – {{title}}" metadata)
         if [[ $show_media_art == "true" ]]; then
             get_media_art
         fi
@@ -71,24 +71,6 @@ function show_volume_notif {
     else
         notify-send -t $notification_timeout -h string:x-dunst-stack-tag:volume_notif -h int:value:$vol_percent "$volume_icon $vol_percent%"
     fi
-}
-
-function show_media_notif {
-    media_title=$(playerctl -f "{{title}}" metadata)
-    media_creator=$(playerctl -f "{{artist}}" metadata)
-    media_name=$(playerctl -f "{{album}}" metadata)
-
-    if [[ $show_media_art == "true" ]]; then
-        get_media_art
-    fi
-
-    if [[ -n "$media_creator" ]]; then
-        notify_body="$media_creator – $media_name"
-    else
-        notify_body="$media_name"
-    fi
-
-    notify-send -t $notification_timeout -h string:x-dunst-stack-tag:media_notif -i "$media_art" "$media_title" "$notify_body"
 }
 
 function show_brightness_notif {
@@ -148,16 +130,13 @@ case $1 in
 
     next_media)
         playerctl next
-        sleep 0.5 && show_media_notif
         ;;
 
     prev_media)
         playerctl previous
-        sleep 0.5 && show_media_notif
         ;;
 
     play_pause)
         playerctl play-pause
-        show_media_notif
         ;;
 esac

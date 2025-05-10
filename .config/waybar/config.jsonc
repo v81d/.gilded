@@ -6,8 +6,8 @@
     "spacing": 5,
     
     // Module positioning
-    "modules-left": ["custom/os", "hyprland/window"],
-    "modules-center": ["hyprland/workspaces", "clock"],
+    "modules-left": ["custom/os", "hyprland/workspaces", "hyprland/window"],
+    "modules-center": ["mpris", "clock"],
     "modules-right": [
         "hyprland/language",
         "network",
@@ -16,26 +16,13 @@
         "battery"
     ],
     
-    // Left modules
     "custom/os": {
         "exec": "echo ''",
         "format": "<span foreground='#ebdbb2'>{}</span>",
         "tooltip": false,
         "on-click": "rofi -show drun -normal-window -show-icons"
     },
-    
-    "hyprland/window": {
-        "format": "{title}",
-        "max-length": 40,
-        "icon": true,
-        "icon-size": 12,
-        "rewrite": {
-            "": "󰧨    Desktop"
-        },
-        "tooltip": false
-    },
-    
-    // Center modules
+
     "hyprland/workspaces": {
         "disable-scroll": true,
         "on-click": "activate",
@@ -44,12 +31,32 @@
         "format-urgent": "{name}"
     },
     
+    "hyprland/window": {
+        "format": "{class}",
+        "max-length": 20,
+        "icon": true,
+        "icon-size": 12,
+        "rewrite": {
+            "": "󰧨    Desktop"
+        },
+        "tooltip": false
+    },
+
+    "mpris": {
+        "format": "{status_icon}  {title}",
+        "status-icons":{
+            "playing": "",
+            "paused": ""
+        },
+        "max-length": 30,
+        "interval": 1
+    },
+    
     "clock": {
         "format": "󰃭   {:%a %b %d    %H:%M}",
         "tooltip": false
     },
     
-    // Right modules
     "hyprland/language": {
         "format": "󰧹    {}"
     },
