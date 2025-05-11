@@ -27,7 +27,7 @@
     progress_bar_corner_radius = 6
 
 [urgency_low]
-    background = "#695B4899"
+    background = "#695b4899"
     foreground = "#ffdeb0"
     frame_color = "#ffdeb0"
     highlight = "#ffdeb0"
@@ -35,7 +35,7 @@
     timeout = 5
 
 [urgency_normal]
-    background = "#695B4899"
+    background = "#695b4899"
     foreground = "#ffdeb0"
     frame_color = "#ffdeb0"
     highlight = "#ffdeb0"
@@ -43,7 +43,7 @@
     timeout = 5
 
 [urgency_critical]
-    background = "#69323299"
+    background = "#695b4899"
     foreground = "#ffb0b0"
     frame_color = "#ffb0b0"
     highlight = "#ffb0b0"

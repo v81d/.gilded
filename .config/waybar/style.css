@@ -57,7 +57,8 @@ window#waybar {
 
 /* Urgent workspace */
 #workspaces button.urgent {
-    color: #cc241d;
+    color: #ebb2b2;
+    background: rgba(163, 106, 106, 0.2);
 }
 
 /* Common module styling for various elements */
