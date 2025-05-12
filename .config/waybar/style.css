@@ -57,8 +57,8 @@ window#waybar {
 
 /* Urgent workspace */
 #workspaces button.urgent {
-    color: #ebb2b2;
-    background: rgba(163, 106, 106, 0.2);
+    color: #ebdbb2;
+    background: rgba(163, 139, 106, 0.4);
 }
 
 /* Common module styling for various elements */
@@ -79,7 +79,7 @@ window#waybar {
 }
 
 /* Hover effect for clickable modules */
-#custom-logo:hover,
+#custom-os:hover,
 #workspaces button:hover,
 #mpris:hover,
 #pulseaudio:hover,

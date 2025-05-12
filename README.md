@@ -1,14 +1,12 @@
-
 # ✨ .gilded
 
 A collection of my personal dotfiles and configurations for a sleek and minimalistic Linux desktop using [Hyprland](https://hyprland.org/). Inspired by Gruvbox and Twilight.
 
-![Desktop Screenshot](./screenshots/1.png)
-![Rofi App Launcher Screenshot](./screenshots/2.png)
-![Rofi Charge Menu Launcher Screenshot](./screenshots/3.png)
-![Hyprlock Screenshot](./screenshots/4.png)
-
-> The last screenshot appears worse than it really is. Unfortunately, I was unable to take a screenshot of the lockscreen and had to resort to taking a cropped photo. I will post an actual screenshot when I have the time.
+| ![Code](./screenshots/Code.png) | ![Terminal](./screenshots/Terminal.png) |
+|:------------------------------:|:------------------------------------:|
+| **Code Editor** | **Terminal** |
+| ![Rofi](./screenshots/Rofi.png) | ![Hyprlock](./screenshots/Hyprlock.png) |
+| **Rofi** | **Hyprlock** |
 
 ## 🛠️ Installation
 
@@ -86,7 +84,7 @@ I included this service here in case anyone would like to use it. Below are the 
 
 Make sure you are already using the `systemd` init system. This service will automatically set the battery charge threshold to a specified value when the system boots up.
 
-Follow these steps in the `~/.gilded` directory you created earlier.
+Follow these steps in the `~/gilded` directory you created earlier.
 
 1. Copy the service file and configuration.
 
