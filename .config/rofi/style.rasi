@@ -105,8 +105,3 @@ element-icon {
 element-icon {
     margin: 0px 10px 0px 0px;
 }
-
-element-text .active,
-element-text .urgent {
-    text-color: @background-main;
-}
