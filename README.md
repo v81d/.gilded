@@ -2,9 +2,9 @@
 
 A collection of my personal dotfiles and configurations for a sleek and minimalistic Linux desktop using [Hyprland](https://hyprland.org/). Inspired by Gruvbox and Twilight.
 
-| ![Code](./screenshots/Code.png) | ![Terminal](./screenshots/Terminal.png) |
+| ![Terminal](./screenshots/Terminal.png) | ![Code](./screenshots/Code.png) |
 |:------------------------------:|:------------------------------------:|
-| **Code Editor** | **Terminal** |
+| **Terminal** | **Code Editor** |
 | ![Rofi](./screenshots/Rofi.png) | ![Hyprlock](./screenshots/Hyprlock.png) |
 | **Rofi** | **Hyprlock** |
 
@@ -73,7 +73,7 @@ sudo reboot
 > Make sure to change paths and file directories to align with your setup. For example, if you are using the .gilded Hyprlock theme, edit the `path` variable under the `image` module.
 > 
 > ```conf
-> path = $HOME/Pictures/Profile Pictures/Aerial Mountains.jpg # Replace with the path to your profile picture
+> path = $HOME/Pictures/Profile Pictures/Aerial Mountains.jpg # Replace this with the path to your profile picture
 > ```
 
 ## 🔋 Battery Charge Threshold (Integration with Rofi)
