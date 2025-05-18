@@ -47,7 +47,7 @@
             "paused": ""
         },
         "max-length": 30,
-        "interval": 1
+        "tooltip": false
     },
     
     "clock": {
@@ -125,6 +125,6 @@
                 "󰁹"
             ]
         },
-        "on-click": "bash ~/.config/rofi/scripts/battery-options.sh"
+        "on-click": "bash ~/.config/rofi/scripts/battery-options.sh &"
     }
 }
