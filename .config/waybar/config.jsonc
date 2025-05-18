@@ -19,7 +19,7 @@
         "exec": "echo ''",
         "format": "<span foreground='#ebdbb2'>{}</span>",
         "tooltip": false,
-        "on-click": "rofi -show drun -normal-window -show-icons"
+        "on-click": "rofi -show drun -normal-window -show-icons &"
     },
 
     "hyprland/workspaces": {
@@ -71,7 +71,7 @@
             "󰤨"
         ],
         "tooltip": false,
-        "on-click": "bash ~/.config/rofi/scripts/wifi.sh"
+        "on-click": "bash ~/.config/rofi/scripts/network-options.sh &"
     },
     
     "pulseaudio": {
@@ -125,6 +125,6 @@
                 "󰁹"
             ]
         },
-        "on-click": "bash ~/.config/rofi/scripts/profile.sh"
+        "on-click": "bash ~/.config/rofi/scripts/battery-options.sh"
     }
 }

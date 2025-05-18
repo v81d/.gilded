@@ -17,7 +17,7 @@ OPTIONS="$(get_option performance "Performance")
 $(get_option balanced "Balanced")
 $(get_option power-saver "Power Saver")"
 
-CHOICE=$(echo -e "$OPTIONS" | rofi -dmenu -i -p "Power Profile" -normal-window)
+CHOICE=$(echo -e "$OPTIONS" | rofi -dmenu -i -p "Power Profiles" -normal-window)
 
 case "$CHOICE" in
     "Performance"*)

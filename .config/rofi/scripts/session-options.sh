@@ -1,6 +1,6 @@
 #!/bin/bash
 
-CHOICE=$(echo -e "Lock\nLogout\nSuspend\nReboot\nShutdown" | rofi -dmenu -i -p "Power" -normal-window)
+CHOICE=$(echo -e "Lock\nLogout\nSuspend\nReboot\nShutdown" | rofi -dmenu -i -p "Session Options" -normal-window)
 
 case "$CHOICE" in
     "Lock")

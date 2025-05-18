@@ -63,10 +63,21 @@ function show_volume_notif {
     get_volume_icon
 
     if [[ $show_media_in_volume_indicator == "true" ]]; then
-        current_media=$(playerctl -f "{{artist}} – {{title}}" metadata)
+        artist=$(playerctl metadata artist 2>/dev/null)
+        title=$(playerctl metadata title 2>/dev/null)
+        
+        if [[ -n "$artist" && -n "$title" ]]; then
+            current_media="$artist – $title"
+        elif [[ -n "$title" ]]; then
+            current_media="$title"
+        else
+            current_media=""
+        fi
+
         if [[ $show_media_art == "true" ]]; then
             get_media_art
         fi
+        
         notify-send -t $notification_timeout -h string:x-dunst-stack-tag:volume_notif -h int:value:$vol_percent -i "$media_art" "$volume_icon $vol_percent%" "$current_media"
     else
         notify-send -t $notification_timeout -h string:x-dunst-stack-tag:volume_notif -h int:value:$vol_percent "$volume_icon $vol_percent%"
@@ -81,7 +92,6 @@ function show_brightness_notif {
     notify-send -t $notification_timeout -h string:x-dunst-stack-tag:brightness_notif -h int:value:$percent "$brightness_icon $percent%"
 }
 
-# Handle user input for different actions
 case $1 in
     volume_up)
         wpctl set-mute @DEFAULT_AUDIO_SINK@ 0

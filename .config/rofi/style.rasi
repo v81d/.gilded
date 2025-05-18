@@ -42,6 +42,8 @@ message {
 }
 
 listview {
+    columns: 2;
+    spacing: 8px;
     padding: 8px;
     background-color: @background-main;
     dynamic: false;

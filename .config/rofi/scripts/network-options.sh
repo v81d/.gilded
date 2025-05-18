@@ -10,7 +10,7 @@ elif [[ "$connected" =~ "disabled" ]]; then
 	toggle="Enable Wi-Fi 󰖩"
 fi
 
-chosen_network=$(echo -e "$toggle\n$wifi_list" | uniq -u | rofi -dmenu -i -selected-row 1 -p "Wi-Fi" -normal-window)
+chosen_network=$(echo -e "$toggle\n$wifi_list" | uniq -u | rofi -dmenu -i -selected-row 1 -p "Network Options" -normal-window)
 read -r chosen_id <<< "$chosen_network"
 
 if [ "$chosen_network" = "" ]; then
