@@ -62,6 +62,7 @@ window#waybar {
 }
 
 /* Common module styling for various elements */
+#taskbar,
 #window,
 #mpris,
 #clock,

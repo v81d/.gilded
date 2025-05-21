@@ -29,6 +29,7 @@ Before installing these dotfiles, check for the packages below. Of course, you d
 | **fastfetch**                        | Blazing-fast system info tool for the terminal, with customizable ASCII logos. |
 | **bc**                               | Precision-friendly command-line calculator for complex and floating-point math. |
 | **hyprlock**                         | A highly customizable GPU-accelerated screen lock for Hyprland. |
+| **wl-clip-persist**                  | Persist the contents of the clipboard on Wayland even after programs close. |
 
 **\* A GUI policy kit authentification agent is required ONLY if you want to use the Rofi charge limit menu. You can use any other agent you prefer. If you do NOT use a policy kit agent, make sure to adjust the necessary settings in `hyprland.conf`.**
 
