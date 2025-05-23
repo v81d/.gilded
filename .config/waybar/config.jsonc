@@ -6,7 +6,7 @@
     "spacing": 5,
     
     // Module positioning
-    "modules-left": ["hyprland/workspaces", "wlr/taskbar", "hyprland/window"],
+    "modules-left": ["hyprland/workspaces", "hyprland/window"],
     "modules-center": ["mpris", "clock"],
     "modules-right": [
         "hyprland/language",
@@ -21,17 +21,12 @@
         "format-activated": "{name}",
         "format-urgent": "{name}"
     },
-
-    "wlr/taskbar": {
-        "on-click": "activate",
-        "on-click-middle": "close"
-    },
     
     "hyprland/window": {
         "format": "{title}",
         "max-length": 30,
         "icon": true,
-        "icon-size": 12,
+        "icon-size": 16,
         "rewrite": {
             "": "󰧨    Desktop"
         },

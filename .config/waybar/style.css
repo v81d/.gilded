@@ -60,38 +60,6 @@ window#waybar {
     color: #ebdbb2;
 }
 
-/* Taskbar container */
-#taskbar {
-    margin-top: 20px;
-    margin-right: 5px;
-    padding: 5px 5px 5px 0;
-    border-radius: 12px;
-    background: rgba(105, 91, 72, 0.6);
-}
-
-/* Individual taskbar buttons */
-#taskbar button {
-    padding-left: 5px;
-    padding-right: 5px;
-    margin-left: 5px;
-    border-radius: 12px;
-    color: #9c8c5f;
-    transition: all 500ms ease;
-}
-
-/* Active window */
-#taskbar button.active {
-    color: #ebdbb2;
-    padding-left: 15px;
-    padding-right: 15px;
-    background: rgba(163, 139, 106, 0.4);
-}
-
-/* Urgent window */
-#taskbar button.urgent {
-    color: #ebdbb2;
-}
-
 /* Common module styling for various elements */
 #window,
 #mpris,
@@ -111,7 +79,6 @@ window#waybar {
 
 /* Hover effect for clickable modules */
 #workspaces button:hover,
-#taskbar button:hover,
 #window:hover,
 #mpris:hover,
 #pulseaudio:hover,
