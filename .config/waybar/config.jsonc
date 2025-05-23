@@ -6,7 +6,7 @@
     "spacing": 5,
     
     // Module positioning
-    "modules-left": ["custom/os", "hyprland/workspaces", "hyprland/window"],
+    "modules-left": ["hyprland/workspaces", "wlr/taskbar", "hyprland/window"],
     "modules-center": ["mpris", "clock"],
     "modules-right": [
         "hyprland/language",
@@ -14,19 +14,17 @@
         "pulseaudio",
         "battery"
     ],
-    
-    "custom/os": {
-        "exec": "echo ''",
-        "format": "<span foreground='#ebdbb2'>{}</span>",
-        "tooltip": false,
-        "on-click": "rofi -show drun -normal-window -show-icons &"
-    },
 
     "hyprland/workspaces": {
         "on-click": "activate",
         "format": "{name}",
         "format-activated": "{name}",
         "format-urgent": "{name}"
+    },
+
+    "wlr/taskbar": {
+        "on-click": "activate",
+        "on-click-middle": "close"
     },
     
     "hyprland/window": {
@@ -37,7 +35,8 @@
         "rewrite": {
             "": "󰧨    Desktop"
         },
-        "tooltip": false
+        "tooltip": false,
+        "on-click": "rofi -show drun -normal-window -show-icons &"
     },
 
     "mpris": {
