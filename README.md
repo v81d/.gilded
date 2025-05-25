@@ -2,11 +2,11 @@
 
 A collection of my personal dotfiles and configurations for a sleek and minimalistic Linux desktop using [Hyprland](https://hyprland.org/). Inspired by Gruvbox and Twilight.
 
-| ![Terminal](./screenshots/Terminal.png) | ![Code](./screenshots/Code.png) |
+| ![Terminal](./screenshots/Terminal.png) | ![Workflow](./screenshots/Workflow.png) |
 |:------------------------------:|:------------------------------------:|
-| **Terminal** | **Code Editor** |
-| ![Rofi](./screenshots/Rofi.png) | ![Hyprlock](./screenshots/Hyprlock.png) |
-| **Rofi** | **Hyprlock** |
+| **Terminal** | **Workflow** |
+| ![Launcher](./screenshots/Launcher.png) | ![Lock Screen](./screenshots/Lock.png) |
+| **Launcher** | **Lock Screen** |
 
 ## 🛠️ Installation
 
@@ -30,16 +30,18 @@ Before installing these dotfiles, check for the packages below. Of course, you d
 | **bc**                               | Precision-friendly command-line calculator for complex and floating-point math. |
 | **hyprlock**                         | A highly customizable GPU-accelerated screen lock for Hyprland. |
 | **wl-clip-persist**                  | Persist the contents of the clipboard on Wayland even after programs close. |
+| **hyprshot**                         | A utility to easily take screenshots in Hyprland using your mouse. |
+| **hyprpicker**                       | A color picker for Wayland. Necessary to enable screen freezing with the `hyprshot` utility. |
 
 **\* A GUI policy kit authentification agent is required ONLY if you want to use the Rofi charge limit menu. You can use any other agent you prefer. If you do NOT use a policy kit agent, make sure to adjust the necessary settings in `hyprland.conf`.**
 
-For my setup, I used the **Adwaita** fonts (for most of the setup), the **Nerd** fonts (for symbols and icons), and **Noto** fonts (to display other characters). You can choose to either install those or configure the fonts in the configuration files to your desires.
+For my setup, I used the **Adwaita** fonts (for most of the setup), **Nerd** fonts (for symbols and icons), and **Noto** fonts (to display other characters). You can choose to either install those or configure the fonts in the configuration files to your preferences.
 
-I also used the [Gruvbox Plus Icon Pack by SylEleuth](https://github.com/SylEleuth/gruvbox-plus-icon-pack). This is not necessary for the configuration, however.
+Additionally, I applied the [Gruvbox GTK Theme](https://github.com/Fausto-Korpsvart/Gruvbox-GTK-Theme) to align with the Gilded style.
 
-Credits to Nicholas Anand for the original [Dunst Media and Brightness Notifications](https://gitlab.com/Nmoleo/i3-volume-brightness-indicator) script. This script has been modified to align with the standards of this configuration.
+Credits to Nicholas Anand for the original [Dunst Media and Brightness Notifications](https://gitlab.com/Nmoleo/i3-volume-brightness-indicator) script. The script has been modified to align with the standards of this configuration.
 
-### Manual Install
+### Full Installation
 
 1. Clone this repository and open it locally.
 
@@ -71,11 +73,7 @@ sudo reboot
 
 6. Thoroughly review your configuration files and adjust settings as needed.
 
-> Make sure to change paths and file directories to align with your setup. For example, if you are using the .gilded Hyprlock theme, edit the `path` variable under the `image` module.
-> 
-> ```conf
-> path = $HOME/Pictures/Profile Pictures/Aerial Mountains.jpg # Replace this with the path to your profile picture
-> ```
+> Make sure to change paths and file directories to align with your setup.
 
 ## 🔋 Battery Charge Threshold (Integration with Rofi)
 
