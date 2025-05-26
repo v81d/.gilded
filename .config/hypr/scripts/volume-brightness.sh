@@ -84,9 +84,9 @@ function show_volume_notif {
             get_media_art
         fi
 
-        new_id=$(notify-send --print-id -t $notification_timeout -a "volume_indicator" --replace-id="$notif_id" -h int:value:$vol_percent -i "$media_art" "$volume_icon $vol_percent%" "$current_media")
+        new_id=$(notify-send --print-id -t $notification_timeout -a "Volume" --replace-id="$notif_id" -h int:value:$vol_percent -i "$media_art" "$volume_icon $vol_percent%" "$current_media")
     else
-        new_id=$(notify-send --print-id -t $notification_timeout -a "volume_indicator" --replace-id="$notif_id" -h int:value:$vol_percent "$volume_icon $vol_percent%")
+        new_id=$(notify-send --print-id -t $notification_timeout -a "Volume" --replace-id="$notif_id" -h int:value:$vol_percent "$volume_icon $vol_percent%")
     fi
 
     echo "$new_id" > "$volume_notif_id_file"
@@ -100,7 +100,7 @@ function show_brightness_notif {
 
     notif_id=$(cat "$brightness_notif_id_file" 2>/dev/null || echo 0)
 
-    new_id=$(notify-send --print-id -t $notification_timeout -a "brightness_indicator" --replace-id="$notif_id" -h int:value:$percent "$brightness_icon $percent%")
+    new_id=$(notify-send --print-id -t $notification_timeout -a "Backlight" --replace-id="$notif_id" -h int:value:$percent "$brightness_icon $percent%")
 
     echo "$new_id" > "$brightness_notif_id_file"
 }
