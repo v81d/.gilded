@@ -2,7 +2,7 @@
  * .gilded theme created by v81d
  */
 
- * {
+* {
     min-height: 0;
     border: none;
     font-family: "Adwaita Sans", sans-serif;
@@ -81,6 +81,7 @@ window#waybar {
 #workspaces button:hover,
 #window:hover,
 #mpris:hover,
+#clock:hover,
 #pulseaudio:hover,
 #network:hover,
 #battery:hover {

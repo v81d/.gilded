@@ -4,92 +4,78 @@
     "layer": "bottom",
     "position": "top",
     "spacing": 5,
-    
+
     // Module positioning
     "modules-left": ["hyprland/workspaces", "hyprland/window"],
     "modules-center": ["mpris", "clock"],
-    "modules-right": [
-        "hyprland/language",
-        "network",
-        "pulseaudio",
-        "battery"
-    ],
+    "modules-right": ["hyprland/language", "network", "pulseaudio", "battery"],
 
     "hyprland/workspaces": {
         "on-click": "activate",
         "format": "{name}",
         "format-activated": "{name}",
-        "format-urgent": "{name}"
+        "format-urgent": "{name}",
     },
-    
+
     "hyprland/window": {
         "format": "{title}",
         "max-length": 30,
         "icon": true,
         "icon-size": 12,
         "rewrite": {
-            "": "󰧨    Desktop"
+            "": "󰧨    Desktop",
         },
         "tooltip": false,
-        "on-click": "rofi -show drun -normal-window -show-icons &"
+        "on-click": "rofi -show drun -normal-window -show-icons &",
     },
 
     "mpris": {
         "format": "{status_icon}  {title}",
-        "status-icons":{
+        "status-icons": {
             "playing": "",
-            "paused": ""
+            "paused": "",
         },
         "max-length": 30,
-        "tooltip": false
+        "tooltip": false,
     },
-    
+
     "clock": {
         "format": "󰃭   {:%a %b %d    %H:%M}",
-        "tooltip": false
+        "tooltip": false,
+        "on-click": "swaync-client -t",
     },
-    
+
     "hyprland/language": {
-        "format": "󰧹    {}"
+        "format": "󰧹    {}",
     },
-    
+
     "network": {
         "format-disconnected": "󰤮    Disconnected",
         "format-wifi": "{icon}    {essid}",
         "format-ethernet": "    {ipaddr}/{cidr}",
-        "format-icons": [
-            "󰤯",
-            "󰤟",
-            "󰤢",
-            "󰤥",
-            "󰤨"
-        ],
+        "format-icons": ["󰤯", "󰤟", "󰤢", "󰤥", "󰤨"],
         "tooltip": false,
-        "on-click": "bash ~/.config/rofi/scripts/network-options.sh &"
+        "on-click": "bash ~/.config/rofi/scripts/network-options.sh &",
     },
-    
+
     "pulseaudio": {
         "format": "{icon}  {volume}%",
         "format-muted": "󰝟   Muted",
         "format-icons": {
             "headset": "󰋎",
-            "speaker": [
-                "󰕿",
-                "󰖀",
-                "󰕾"
-            ]
+            "speaker": ["󰕿", "󰖀", "󰕾"],
         },
         "on-click": "pavucontrol",
         "on-click-middle": "wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle",
         "on-scroll-up": "wpctl set-volume -l 1 @DEFAULT_AUDIO_SINK@ 2%+",
-        "on-scroll-down": "wpctl set-volume @DEFAULT_AUDIO_SINK@ 2%-"
+        "on-scroll-down": "wpctl set-volume @DEFAULT_AUDIO_SINK@ 2%-",
     },
-    
+
     "battery": {
         "states": {
             "good": 80,
             "warning": 20,
-            "critical": 10
+            "critical": 10,
         },
         "interval": 5,
         "format": "{icon}  {capacity}%",
@@ -104,21 +90,10 @@
                 "󰢞 ",
                 "󰂊 ",
                 "󰂋 ",
-                "󰂅 "
+                "󰂅 ",
             ],
-            "default": [
-                "󰁺",
-                "󰁻",
-                "󰁼",
-                "󰁽",
-                "󰁾",
-                "󰁿",
-                "󰂀",
-                "󰂁",
-                "󰂂",
-                "󰁹"
-            ]
+            "default": ["󰁺", "󰁻", "󰁼", "󰁽", "󰁾", "󰁿", "󰂀", "󰂁", "󰂂", "󰁹"],
         },
-        "on-click": "bash ~/.config/rofi/scripts/battery-options.sh &"
-    }
+        "on-click": "bash ~/.config/rofi/scripts/battery-options.sh &",
+    },
 }

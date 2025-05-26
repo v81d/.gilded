@@ -1,6 +1,10 @@
 #!/bin/bash
 
 # Original script created by Nicholas Anand: https://gitlab.com/Nmoleo/i3-volume-brightness-indicator
+# Modified by v81d to support Sway Notification Center (SwayNC)
+
+volume_notif_id_file="/tmp/volume_notif_id"
+brightness_notif_id_file="/tmp/brightness_notif_id"
 
 volume_step=0.02
 brightness_step=4
@@ -26,7 +30,7 @@ function get_volume_icon {
     volume=$(get_volume)
     mute=$(get_mute)
     vol_percent=$(printf "%.0f" "$(echo "$volume * 100" | bc -l)")
-    
+
     if [ "$vol_percent" -eq 0 ] || [ "$mute" == "muted" ]; then
         volume_icon="󰝟 "
     elif [ "$vol_percent" -lt 50 ]; then
@@ -42,7 +46,7 @@ function get_brightness_icon {
 
 function get_media_art {
     url=$(playerctl -f "{{mpris:artUrl}}" metadata)
-    
+
     if [[ $url == "file://"* ]]; then
         media_art="${url/file:\/\//}"
     elif [[ $url == "http://"* || $url == "https://"* ]] && [[ $download_media_art == "true" ]]; then
@@ -62,10 +66,12 @@ function show_volume_notif {
     mute=$(get_mute)
     get_volume_icon
 
+    notif_id=$(cat "$volume_notif_id_file" 2>/dev/null || echo 0)
+
     if [[ $show_media_in_volume_indicator == "true" ]]; then
         artist=$(playerctl metadata artist 2>/dev/null)
         title=$(playerctl metadata title 2>/dev/null)
-        
+
         if [[ -n "$artist" && -n "$title" ]]; then
             current_media="$artist – $title"
         elif [[ -n "$title" ]]; then
@@ -77,11 +83,13 @@ function show_volume_notif {
         if [[ $show_media_art == "true" ]]; then
             get_media_art
         fi
-        
-        notify-send -t $notification_timeout -h string:x-dunst-stack-tag:volume_notif -h int:value:$vol_percent -i "$media_art" "$volume_icon $vol_percent%" "$current_media"
+
+        new_id=$(notify-send --print-id -t $notification_timeout -a "volume_indicator" --replace-id="$notif_id" -h int:value:$vol_percent -i "$media_art" "$volume_icon $vol_percent%" "$current_media")
     else
-        notify-send -t $notification_timeout -h string:x-dunst-stack-tag:volume_notif -h int:value:$vol_percent "$volume_icon $vol_percent%"
+        new_id=$(notify-send --print-id -t $notification_timeout -a "volume_indicator" --replace-id="$notif_id" -h int:value:$vol_percent "$volume_icon $vol_percent%")
     fi
+
+    echo "$new_id" > "$volume_notif_id_file"
 }
 
 function show_brightness_notif {
@@ -89,7 +97,12 @@ function show_brightness_notif {
     max_brightness=$(brightnessctl m)
     percent=$(printf "%.0f" "$(echo "$brightness / $max_brightness * 100" | bc -l)")
     get_brightness_icon
-    notify-send -t $notification_timeout -h string:x-dunst-stack-tag:brightness_notif -h int:value:$percent "$brightness_icon $percent%"
+
+    notif_id=$(cat "$brightness_notif_id_file" 2>/dev/null || echo 0)
+
+    new_id=$(notify-send --print-id -t $notification_timeout -a "brightness_indicator" --replace-id="$notif_id" -h int:value:$percent "$brightness_icon $percent%")
+
+    echo "$new_id" > "$brightness_notif_id_file"
 }
 
 case $1 in
@@ -114,7 +127,7 @@ case $1 in
         wpctl set-volume @DEFAULT_AUDIO_SINK@ $new_volume
         show_volume_notif
         ;;
-    
+
     volume_mute)
         wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle
         show_volume_notif
