@@ -26,7 +26,7 @@
         "format": "{title}",
         "max-length": 30,
         "icon": true,
-        "icon-size": 16,
+        "icon-size": 12,
         "rewrite": {
             "": "󰧨    Desktop"
         },
