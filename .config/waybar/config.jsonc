@@ -37,6 +37,7 @@
         },
         "max-length": 30,
         "tooltip": false,
+        "interval": 1,
     },
 
     "clock": {

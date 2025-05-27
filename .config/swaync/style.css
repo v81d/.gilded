@@ -1,3 +1,7 @@
+/*
+ * .gilded theme created by v81d
+ */
+
 * {
     font-size: 14px;
     font-family: Adwaita Sans;
@@ -8,24 +12,30 @@
     outline: unset;
 }
 
-scrollbar {
+scrollbar,
+.close-button {
     opacity: 0;
 }
 
-.floating-notifications .notification-row:first-child {
-    margin-top: 10px;
+.floating-notifications .notification-row {
+    margin: 14px;
 }
 
-.floating-notifications .notification-row .notification-background .notification {
+.floating-notifications
+    .notification-row
+    .notification-background
+    .notification {
     box-shadow: 0px 3px 3px rgba(0, 0, 0, 0.25);
 }
 
-.notification-row .notification-background .notification button,
 .notification-row .notification-background .notification button {
     margin-top: -6px;
 }
 
-.notification-row .notification-background .notification .notification-default-action,
+.notification-row
+    .notification-background
+    .notification
+    .notification-default-action,
 .notification-row .notification-background .notification .notification-action {
     background-color: #22201d;
     border: unset;
@@ -33,13 +43,25 @@ scrollbar {
     margin-top: 2px;
 }
 
-.notification-row .notification-background .notification .notification-default-action:hover,
-.notification-row .notification-background .notification .notification-action:hover {
+.notification-row
+    .notification-background
+    .notification
+    .notification-default-action:hover,
+.notification-row
+    .notification-background
+    .notification
+    .notification-action:hover {
     background-color: #36332f;
 }
 
-.notification-row .notification-background .notification .notification-default-action:active,
-.notification-row .notification-background .notification .notification-action:active {
+.notification-row
+    .notification-background
+    .notification
+    .notification-default-action:active,
+.notification-row
+    .notification-background
+    .notification
+    .notification-action:active {
     background-color: #47433e;
 }
 
@@ -60,88 +82,214 @@ scrollbar {
     margin-right: 10px;
 }
 
+.notification-row progressbar trough,
 .notification-row progressbar trough progress {
-    background-color: #987454;
     border-radius: 3px;
     min-height: 6px;
 }
 
 .notification-row progressbar trough {
     background-color: #454545;
-    border-radius: 3px;
-    min-height: 6px;
+}
+
+.notification-row progressbar trough progress {
+    background-color: #987454;
 }
 
 .control-center .notification-row .notification-background .notification box,
 .control-center .notification-row .notification-background .notification widget,
-.control-center .notification-row .notification-background .notification .notification-content,
-.floating-notifications .notification-row .notification-background .notification box,
-.floating-notifications .notification-row .notification-background .notification widget,
-.floating-notifications.background .notification-background .notification .notification-content {
+.control-center
+    .notification-row
+    .notification-background
+    .notification
+    .notification-content,
+.floating-notifications
+    .notification-row
+    .notification-background
+    .notification
+    box,
+.floating-notifications
+    .notification-row
+    .notification-background
+    .notification
+    widget,
+.floating-notifications.background
+    .notification-background
+    .notification
+    .notification-content {
     padding-right: unset;
     -gtk-outline-radius: 3px;
 }
 
-.floating-notifications.background .notification-background .notification .notification-content,
+.floating-notifications.background
+    .notification-background
+    .notification
+    .notification-content,
 .control-center .notification-background .notification .notification-content {
     background-color: #22201d;
     padding: 13px;
 }
 
-.control-center .notification-row .notification-background .notification.low .notification-content label,
-.control-center .notification-row .notification-background .notification.normal .notification-content label,
-.floating-notifications.background .notification-background .notification.low .notification-content label,
-.floating-notifications.background .notification-background .notification.normal .notification-content label {
+.control-center
+    .notification-row
+    .notification-background
+    .notification.low
+    .notification-content
+    label,
+.control-center
+    .notification-row
+    .notification-background
+    .notification.normal
+    .notification-content
+    label,
+.floating-notifications.background
+    .notification-background
+    .notification.low
+    .notification-content
+    label,
+.floating-notifications.background
+    .notification-background
+    .notification.normal
+    .notification-content
+    label {
     color: #d0cbc5;
 }
 
-.control-center .notification-row .notification-background .notification..notification-content image,
-.control-center .notification-row .notification-background .notification.normal .notification-content image,
-.floating-notifications.background .notification-background .notification.low .notification-content image,
-.floating-notifications.background .notification-background .notification.normal .notification-content image {
+.control-center
+    .notification-row
+    .notification-background
+    .notification
+    .notification-content
+    image,
+.control-center
+    .notification-row
+    .notification-background
+    .notification.normal
+    .notification-content
+    image,
+.floating-notifications.background
+    .notification-background
+    .notification.low
+    .notification-content
+    image,
+.floating-notifications.background
+    .notification-background
+    .notification.normal
+    .notification-content
+    image {
     background-color: unset;
     color: #f9efe0;
 }
 
-.control-center .notification-row .notification-background .notification.low .notification-content .body,
-.control-center .notification-row .notification-background .notification.normal .notification-content .body,
-.floating-notifications.background .notification-background .notification.low .notification-content .body,
-.floating-notifications.background .notification-background .notification.normal .notification-content .body {
+.control-center
+    .notification-row
+    .notification-background
+    .notification.low
+    .notification-content
+    .body,
+.control-center
+    .notification-row
+    .notification-background
+    .notification.normal
+    .notification-content
+    .body,
+.floating-notifications.background
+    .notification-background
+    .notification.low
+    .notification-content
+    .body,
+.floating-notifications.background
+    .notification-background
+    .notification.normal
+    .notification-content
+    .body {
     color: #9a9691;
 }
 
-.control-center .notification-row .notification-background .notification.critical .notification-content,
-.floating-notifications.background .notification-background .notification.critical .notification-content {
+.control-center
+    .notification-row
+    .notification-background
+    .notification.critical
+    .notification-content,
+.floating-notifications.background
+    .notification-background
+    .notification.critical
+    .notification-content {
     background-color: #403a32;
 }
 
-.control-center .notification-row .notification-background .notification.critical .notification-content image,
-.floating-notifications.background .notification-background .notification.critical .notification-content image {
+.control-center
+    .notification-row
+    .notification-background
+    .notification.critical
+    .notification-content
+    image,
+.floating-notifications.background
+    .notification-background
+    .notification.critical
+    .notification-content
+    image {
     background-color: unset;
     color: #d9ccbd;
 }
 
-.control-center .notification-row .notification-background .notification.critical .notification-content label,
-.floating-notifications.background .notification-background .notification.critical .notification-content label {
+.control-center
+    .notification-row
+    .notification-background
+    .notification.critical
+    .notification-content
+    label,
+.floating-notifications.background
+    .notification-background
+    .notification.critical
+    .notification-content
+    label {
     color: #fcecd4;
 }
 
-.control-center .notification-row .notification-background .notification .notification-content .summary,
-.floating-notifications.background .notification-background .notification .notification-content .summary {
+.control-center
+    .notification-row
+    .notification-background
+    .notification
+    .notification-content
+    .summary,
+.floating-notifications.background
+    .notification-background
+    .notification
+    .notification-content
+    .summary {
     font-size: 14px;
     font-weight: 500;
 }
 
-.control-center .notification-row .notification-background .notification .notification-content .time,
-.floating-notifications.background .notification-background .notification .notification-content .time {
+.control-center
+    .notification-row
+    .notification-background
+    .notification
+    .notification-content
+    .time,
+.floating-notifications.background
+    .notification-background
+    .notification
+    .notification-content
+    .time {
     font-size: 13px;
     font-weight: 500;
     margin-right: 16px;
     padding-right: unset;
 }
 
-.control-center .notification-row .notification-background .notification .notification-content .body,
-.floating-notifications.background .notification-background .notification .notification-content .body {
+.control-center
+    .notification-row
+    .notification-background
+    .notification
+    .notification-content
+    .body,
+.floating-notifications.background
+    .notification-background
+    .notification
+    .notification-content
+    .body {
     font-size: 14px;
     font-weight: 400;
     margin-top: 5px;
@@ -153,25 +301,27 @@ scrollbar {
     margin-top: 20px;
 }
 
-.notification-group .notification-group-headers, .notification-group .notification-group-buttons {
+.notification-group .notification-group-headers,
+.notification-group .notification-group-buttons {
     opacity: 0.5;
     margin-bottom: 10px;
 }
 
-.close-button {
-    opacity: 0;
+.notification-group .notification-group-headers .notification-group-header {
+    margin-left: 5px;
 }
+
+/* Control Center Panel */
 
 .control-center {
     border-radius: 24px;
     -gtk-outline-radius: 24px;
     box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.5);
-    margin: 7px;
     background-color: #120f0c;
     padding: 10px;
 }
 
-/* Title */
+/* Title Section */
 
 .widget-title {
     padding: 10px;
@@ -206,15 +356,30 @@ scrollbar {
     background-color: rgba(128, 128, 128, 0.7);
 }
 
-/* MPRIS */
+/* MPRIS Widget */
 
 .widget-mpris {
     margin-top: 10px;
     background: unset;
 }
 
-.widget-mpris button {
+.widget-mpris .widget-mpris-player > box > button {
+    all: unset;
+    margin-top: 10px;
     color: white;
+    background: unset;
+    border-radius: 100%;
+    min-width: 36px;
+    min-height: 36px;
+    transition: 200ms;
+}
+
+.widget-mpris .widget-mpris-player > box > button:hover {
+    background-color: rgba(128, 128, 128, 0.3);
+}
+
+.widget-mpris .widget-mpris-player > box > button:active {
+    background-color: rgba(128, 128, 128, 0.7);
 }
 
 .widget-mpris-title {
