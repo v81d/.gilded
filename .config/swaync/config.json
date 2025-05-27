@@ -18,7 +18,7 @@
     "notification-icon-size": 40,
     "notification-inline-replies": false,
     "notification-visibility": {},
-    "notification-window-width": 400,
+    "notification-window-width": 350,
     "positionX": "center",
     "positionY": "top",
     "script-fail-notify": true,

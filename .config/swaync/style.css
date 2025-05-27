@@ -17,8 +17,8 @@ scrollbar,
     opacity: 0;
 }
 
-.floating-notifications .notification-row {
-    margin: 14px;
+.floating-notifications .notification-row:first-child {
+    margin-top: 14px;
 }
 
 .floating-notifications
