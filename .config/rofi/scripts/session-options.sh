@@ -1,21 +1,21 @@
 #!/bin/bash
 
-CHOICE=$(echo -e "Lock\nLogout\nSuspend\nReboot\nShutdown" | rofi -dmenu -i -p "Session Options" -normal-window)
+CHOICE=$(echo -e "󰌾   Lock\n󰗽   Logout\n󰂠   Suspend\n   Reboot\n󰚦   Power Off" | rofi -dmenu -i -p "Session Options" -normal-window)
 
 case "$CHOICE" in
-    "Lock")
+    "󰌾   Lock")
         hyprlock &
         ;;
-    "Logout")
+    "󰗽   Logout")
         hyprctl dispatch exit
         ;;
-    "Suspend")
+    "󰂠   Suspend")
         systemctl suspend
         ;;
-    "Reboot")
+    "   Reboot")
         systemctl reboot
         ;;
-    "Shutdown")
+    "󰚦   Power Off")
         systemctl poweroff
         ;;
     *)

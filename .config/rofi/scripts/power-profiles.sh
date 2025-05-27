@@ -13,20 +13,20 @@ get_option() {
     fi
 }
 
-OPTIONS="$(get_option performance "Performance")
-$(get_option balanced "Balanced")
-$(get_option power-saver "Power Saver")"
+OPTIONS="$(get_option performance "󰠠   Performance")
+$(get_option balanced "󱪈   Balanced")
+$(get_option power-saver "   Power Saver")"
 
 CHOICE=$(echo -e "$OPTIONS" | rofi -dmenu -i -p "Power Profiles" -normal-window)
 
 case "$CHOICE" in
-    "Performance"*)
+    "󰠠   Performance"*)
         powerprofilesctl set performance
         ;;
-    "Balanced"*)
+    "   Balanced"*)
         powerprofilesctl set balanced
         ;;
-    "Power Saver"*)
+    "   Power Saver"*)
         powerprofilesctl set power-saver
         ;;
     *)

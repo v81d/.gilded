@@ -1,15 +1,15 @@
 #!/bin/bash
 
-CHOICE=$(echo -e "Charge Settings\nPower Profiles\nSession Options" | rofi -dmenu -i -p "Battery Options" -normal-window)
+CHOICE=$(echo -e "   Charge Settings\n󱐋   Power Profiles\n󰐥   Session Options" | rofi -dmenu -i -p "Battery Options" -normal-window)
 
 case "$CHOICE" in
-    "Charge Settings"*)
+    "   Charge Settings"*)
         bash ~/.config/rofi/scripts/charge-settings.sh
         ;;
-    "Power Profiles"*)
+    "󱐋   Power Profiles"*)
         bash ~/.config/rofi/scripts/power-profiles.sh
         ;;
-    "Session Options"*)
+    "󰐥   Session Options"*)
         bash ~/.config/rofi/scripts/session-options.sh
         ;;
     *)
