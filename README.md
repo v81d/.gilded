@@ -16,12 +16,13 @@ Before installing these dotfiles, check for the packages below. Of course, you d
 
 | Package                              | Description                                                                 |
 |--------------------------------------|-----------------------------------------------------------------------------|
+| **adw-gtk-theme**                   | The theme from Libadwaita ported to GTK3. |
 | **swaync \***                        | A feature-rich and highly customizable notification center. |
 | **hyprland**                         | Dynamic tiling Wayland compositor with modern effects and flexible configuration. |
 | **kitty**                            | A GPU-accelerated terminal emulator focused on speed, features, and readability. |
 | **rofi**                             | Versatile launcher used for app switching, commands, and more. |
 | **waybar**                           | A sleek and modular status bar for Wayland compositors like Sway and Hyprland. |
-| **lxqt-policykit \*\***                | Graphical authentication agent for managing privileged actions in a desktop environment. |
+| **lxqt-policykit \*\***              | Graphical authentication agent for managing privileged actions in a desktop environment. |
 | **hyprpaper**                        | Lightweight wallpaper manager designed specifically for Hyprland. |
 | **brightnessctl**                    | Command-line utility to read and adjust screen brightness using sysfs. |
 | **slurp**                            | Region selection tool for Wayland, ideal for screenshot or screen recording workflows. |
@@ -29,7 +30,7 @@ Before installing these dotfiles, check for the packages below. Of course, you d
 | **fastfetch**                        | Blazing-fast system info tool for the terminal, with customizable ASCII logos. |
 | **bc**                               | Precision-friendly command-line calculator for complex and floating-point math. |
 | **hyprlock**                         | A highly customizable GPU-accelerated screen lock for Hyprland. |
-|**hyprshot**                         | A utility to easily take screenshots in Hyprland using your mouse. |
+|**hyprshot**                          | A utility to easily take screenshots in Hyprland using your mouse. |
 | **hyprpicker**                       | A color picker for Wayland. Necessary to enable screen freezing with the `hyprshot` utility. |
 
 * As of Monday, May 26, 2025, Dunst has been replaced by Sway Notification Center. However, the Dunst configuration remains for you to use if you prefer it. To open the control center, simply click the clock module in your Waybar.
