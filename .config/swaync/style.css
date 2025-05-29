@@ -324,7 +324,7 @@ scrollbar,
 /* Title Section */
 
 .widget-title {
-    padding: 10px;
+    padding: 20px;
 }
 
 .widget-title label {
@@ -342,10 +342,10 @@ scrollbar,
 
 .widget-title button label {
     font-weight: normal;
-    font-size: 14px;
+    font-size: 16px;
     color: #e6e4e1;
-    margin-left: 15px;
-    margin-right: 15px;
+    margin-left: 20px;
+    margin-right: 20px;
 }
 
 .widget-title button:hover {
