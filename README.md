@@ -2,11 +2,44 @@
 
 A collection of my personal dotfiles and configurations for a sleek and minimalistic Linux desktop using [Hyprland](https://hyprland.org/). Inspired by Gruvbox and Twilight.
 
-| ![Terminal](./screenshots/Terminal.png) | ![Workflow](./screenshots/Workflow.png) |
-|:------------------------------:|:------------------------------------:|
-| **Terminal** | **Workflow** |
-| ![Launcher](./screenshots/Launcher.png) | ![Lock Screen](./screenshots/Lock.png) |
-| **Launcher** | **Lock Screen** |
+<table style="width: 100%; table-layout: fixed; border-collapse: collapse;">
+  <tr>
+    <td style="width: 50%; text-align: center; vertical-align: middle;">
+      <img src="./screenshots/Terminal.png" alt="Terminal" style="max-width: 100%; height: auto;">
+    </td>
+    <td style="width: 50%; text-align: center; vertical-align: middle;">
+      <img src="./screenshots/Workflow.png" alt="Workflow" style="max-width: 100%; height: auto;">
+    </td>
+  </tr>
+  <tr>
+    <td style="width: 50%; text-align: center; font-weight: bold;">Terminal</td>
+    <td style="width: 50%; text-align: center; font-weight: bold;">Workflow</td>
+  </tr>
+  <tr>
+    <td style="width: 50%; text-align: center; vertical-align: middle;">
+      <img src="./screenshots/Launcher.png" alt="Launcher" style="max-width: 100%; height: auto;">
+    </td>
+    <td style="width: 50%; text-align: center; vertical-align: middle;">
+      <img src="./screenshots/Lock.png" alt="Lock Screen" style="max-width: 100%; height: auto;">
+    </td>
+  </tr>
+  <tr>
+    <td style="width: 50%; text-align: center; font-weight: bold;">Launcher</td>
+    <td style="width: 50%; text-align: center; font-weight: bold;">Lock Screen</td>
+  </tr>
+  <tr>
+    <td style="width: 50%; text-align: center; vertical-align: middle;">
+      <img src="./screenshots/Desktop.png" alt="Desktop" style="max-width: 100%; height: auto;">
+    </td>
+    <td style="width: 50%; text-align: center; vertical-align: middle;">
+      <img src="./screenshots/Notifications.png" alt="Notifications" style="max-width: 100%; height: auto;">
+    </td>
+  </tr>
+  <tr>
+    <td style="width: 50%; text-align: center; font-weight: bold;">Desktop</td>
+    <td style="width: 50%; text-align: center; font-weight: bold;">Notification Center</td>
+  </tr>
+</table>
 
 ## 🛠️ Installation
 
@@ -14,24 +47,24 @@ A collection of my personal dotfiles and configurations for a sleek and minimali
 
 Before installing these dotfiles, check for the packages below. Of course, you do **not** need to use the exact same set of packages; however, if you choose to exclude some of these packages, you must modify the configuration files to align with your setup.
 
-| Package                              | Description                                                                 |
-|--------------------------------------|-----------------------------------------------------------------------------|
-| **adw-gtk-theme**                   | The theme from Libadwaita ported to GTK3. |
-| **swaync \***                        | A feature-rich and highly customizable notification center. |
-| **hyprland**                         | Dynamic tiling Wayland compositor with modern effects and flexible configuration. |
-| **kitty**                            | A GPU-accelerated terminal emulator focused on speed, features, and readability. |
-| **rofi**                             | Versatile launcher used for app switching, commands, and more. |
-| **waybar**                           | A sleek and modular status bar for Wayland compositors like Sway and Hyprland. |
-| **lxqt-policykit \*\***              | Graphical authentication agent for managing privileged actions in a desktop environment. |
-| **hyprpaper**                        | Lightweight wallpaper manager designed specifically for Hyprland. |
-| **brightnessctl**                    | Command-line utility to read and adjust screen brightness using sysfs. |
-| **slurp**                            | Region selection tool for Wayland, ideal for screenshot or screen recording workflows. |
-| **grim**                             | Screenshot utility for Wayland, often paired with slurp for precise region capture. |
-| **fastfetch**                        | Blazing-fast system info tool for the terminal, with customizable ASCII logos. |
-| **bc**                               | Precision-friendly command-line calculator for complex and floating-point math. |
-| **hyprlock**                         | A highly customizable GPU-accelerated screen lock for Hyprland. |
-|**hyprshot**                          | A utility to easily take screenshots in Hyprland using your mouse. |
-| **hyprpicker**                       | A color picker for Wayland. Necessary to enable screen freezing with the `hyprshot` utility. |
+| Package | Description |
+|-|-|
+| **adw-gtk-theme** | The theme from Libadwaita ported to GTK3. |
+| **swaync \*** | A feature-rich and highly customizable notification center. |
+| **hyprland** | Dynamic tiling Wayland compositor with modern effects and flexible configuration. |
+| **kitty** | A GPU-accelerated terminal emulator focused on speed, features, and readability. |
+| **rofi** | Versatile launcher used for app switching, commands, and more. |
+| **waybar** | A sleek and modular status bar for Wayland compositors like Sway and Hyprland. |
+| **lxqt-policykit \*\*** | Graphical authentication agent for managing privileged actions in a desktop environment. |
+| **hyprpaper** | Lightweight wallpaper manager designed specifically for Hyprland. |
+| **brightnessctl** | Command-line utility to read and adjust screen brightness using sysfs. |
+| **slurp** | Region selection tool for Wayland, ideal for screenshot or screen recording workflows. |
+| **grim** | Screenshot utility for Wayland, often paired with slurp for precise region capture. |
+| **fastfetch** | Blazing-fast system info tool for the terminal, with customizable ASCII logos. |
+| **bc** | Precision-friendly command-line calculator for complex and floating-point math. |
+| **hyprlock** | A highly customizable GPU-accelerated screen lock for Hyprland. |
+| **hyprshot** | A utility to easily take screenshots in Hyprland using your mouse. |
+| **hyprpicker** | A color picker for Wayland. Necessary to enable screen freezing with the `hyprshot` utility. |
 
 * As of Monday, May 26, 2025, Dunst has been replaced by Sway Notification Center. However, the Dunst configuration remains for you to use if you prefer it. To open the control center, simply click the clock module in your Waybar.
 
