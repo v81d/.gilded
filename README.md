@@ -58,8 +58,6 @@ Before installing these dotfiles, check for the packages below. Of course, you d
 | **lxqt-policykit \*\*** | Graphical authentication agent for managing privileged actions in a desktop environment. |
 | **hyprpaper** | Lightweight wallpaper manager designed specifically for Hyprland. |
 | **brightnessctl** | Command-line utility to read and adjust screen brightness using sysfs. |
-| **slurp** | Region selection tool for Wayland, ideal for screenshot or screen recording workflows. |
-| **grim** | Screenshot utility for Wayland, often paired with slurp for precise region capture. |
 | **fastfetch** | Blazing-fast system info tool for the terminal, with customizable ASCII logos. |
 | **bc** | Precision-friendly command-line calculator for complex and floating-point math. |
 | **hyprlock** | A highly customizable GPU-accelerated screen lock for Hyprland. |
