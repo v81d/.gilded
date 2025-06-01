@@ -50,27 +50,28 @@ Before installing these dotfiles, check for the packages below. Of course, you d
 | Package | Description |
 |-|-|
 | **adw-gtk-theme** | The theme from Libadwaita ported to GTK3. |
-| **swaync \*** | A feature-rich and highly customizable notification center. |
-| **hyprland** | Dynamic tiling Wayland compositor with modern effects and flexible configuration. |
-| **kitty** | A GPU-accelerated terminal emulator focused on speed, features, and readability. |
-| **rofi** | Versatile launcher used for app switching, commands, and more. |
-| **waybar** | A sleek and modular status bar for Wayland compositors like Sway and Hyprland. |
-| **lxqt-policykit \*\*** | Graphical authentication agent for managing privileged actions in a desktop environment. |
-| **hyprpaper** | Lightweight wallpaper manager designed specifically for Hyprland. |
+| **bc** | Precision-friendly command-line calculator for complex and floating-point math. |
 | **brightnessctl** | Command-line utility to read and adjust screen brightness using sysfs. |
 | **fastfetch** | Blazing-fast system info tool for the terminal, with customizable ASCII logos. |
-| **bc** | Precision-friendly command-line calculator for complex and floating-point math. |
+| **hyprland** | Dynamic tiling Wayland compositor with modern effects and flexible configuration. |
 | **hyprlock** | A highly customizable GPU-accelerated screen lock for Hyprland. |
-| **hyprshot** | A utility to easily take screenshots in Hyprland using your mouse. |
+| **hyprpaper** | Lightweight wallpaper manager designed specifically for Hyprland. |
 | **hyprpicker** | A color picker for Wayland. Necessary to enable screen freezing with the `hyprshot` utility. |
+| **hyprshot** | A utility to easily take screenshots in Hyprland using your mouse. |
+| **kitty** | A GPU-accelerated terminal emulator focused on speed, features, and readability. |
+| **lxqt-policykit \*** | Graphical authentication agent for managing privileged actions in a desktop environment. |
+| **rofi** | Versatile launcher used for app switching, commands, and more. |
+| **swaync \*\*** | A feature-rich and highly customizable notification center. |
+| **ttf-jetbrains-mono-nerd** | The JetBrains Mono Nerd Font families. |
+| **waybar** | A sleek and modular status bar for Wayland compositors like Sway and Hyprland. |
 
-* As of Monday, May 26, 2025, Dunst has been replaced by Sway Notification Center. However, the Dunst configuration remains for you to use if you prefer it. To open the control center, simply click the clock module in your Waybar.
+\* You can use any other agent you prefer. If you do NOT use a policy kit agent, make sure to adjust the necessary settings in `hyprland.conf`.
 
-** You can use any other agent you prefer. If you do NOT use a policy kit agent, make sure to adjust the necessary settings in `hyprland.conf`.
+** As of Monday, May 26, 2025, Dunst has been replaced by Sway Notification Center. However, the Dunst configuration remains for you to use if you prefer it. To open the control center, simply click the clock module in your Waybar.
 
 ---
 
-To replicate my exact setup, you must install the **Adwaita** fonts and the **JetBrains Mono Nerd Font**. If you want to use a different set of fonts, you must edit the configuration files.
+To replicate my exact setup, you should install the **Adwaita** fonts and the **JetBrains Mono Nerd Font**. If you want to use a different set of fonts, you must edit the configuration files.
 
 Credits to Nicholas Anand for the original [Dunst Media and Brightness Notifications](https://gitlab.com/Nmoleo/i3-volume-brightness-indicator) script. The script has been modified to align with the standards of this configuration.
 
