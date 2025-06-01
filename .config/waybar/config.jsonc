@@ -23,14 +23,14 @@
         "icon": true,
         "icon-size": 12,
         "rewrite": {
-            "": "󰧨    Desktop",
+            "": "<span font='JetBrainsMono Nerd Font Mono'>󰧨 </span>Desktop",
         },
         "tooltip": false,
         "on-click": "rofi -show drun -normal-window -show-icons &",
     },
 
     "mpris": {
-        "format": "{status_icon}  {title}",
+        "format": "<span font='JetBrainsMono Nerd Font Mono'>{status_icon} </span>{title}",
         "status-icons": {
             "playing": "",
             "paused": "",
@@ -41,27 +41,27 @@
     },
 
     "clock": {
-        "format": "󰃭   {:%a %b %d    %H:%M}",
+        "format": "<span font='JetBrainsMono Nerd Font Mono'>󰃭 </span>{:%a %b %d    %H:%M}",
         "tooltip": false,
         "on-click": "swaync-client -t",
     },
 
     "hyprland/language": {
-        "format": "󰧹    {}",
+        "format": "<span font='JetBrainsMono Nerd Font Mono'>󰌌 </span>{}",
     },
 
     "network": {
-        "format-disconnected": "󰤮    Disconnected",
-        "format-wifi": "{icon}    {essid}",
-        "format-ethernet": "    {ipaddr}/{cidr}",
+        "format-disconnected": "<span font='JetBrainsMono Nerd Font Mono'>󰤮 </span>Disconnected",
+        "format-wifi": "<span font='JetBrainsMono Nerd Font Mono'>{icon} </span>{essid}",
+        "format-ethernet": "<span font='JetBrainsMono Nerd Font Mono'> </span>{ipaddr}/{cidr}",
         "format-icons": ["󰤯", "󰤟", "󰤢", "󰤥", "󰤨"],
         "tooltip": false,
         "on-click": "bash ~/.config/rofi/scripts/network-options.sh &",
     },
 
     "pulseaudio": {
-        "format": "{icon}  {volume}%",
-        "format-muted": "󰝟   Muted",
+        "format": "<span font='monospace'>{icon} </span>{volume}%",
+        "format-muted": "<span font='JetBrainsMono Nerd Font Mono'>󰝟 </span>Muted",
         "format-icons": {
             "headset": "󰋎",
             "speaker": ["󰕿", "󰖀", "󰕾"],
@@ -79,7 +79,7 @@
             "critical": 10,
         },
         "interval": 5,
-        "format": "{icon}  {capacity}%",
+        "format": "<span font='JetBrainsMono Nerd Font Mono'>{icon} </span>{capacity}%",
         "format-icons": {
             "charging": [
                 "󰢜 ",

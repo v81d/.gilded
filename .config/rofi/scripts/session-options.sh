@@ -1,21 +1,21 @@
 #!/bin/bash
 
-CHOICE=$(echo -e "󰌾   Lock\n󰗽   Logout\n󰂠   Suspend\n   Reboot\n󰚦   Power Off" | rofi -dmenu -i -p "Session Options" -normal-window)
+CHOICE=$(echo -e "<span font='JetBrainsMono Nerd Font Mono'>󰌾 </span>Lock\n<span font='JetBrainsMono Nerd Font Mono'>󰗽 </span>Logout\n<span font='JetBrainsMono Nerd Font Mono'>󰂠 </span>Suspend\n<span font='JetBrainsMono Nerd Font Mono'> </span>Reboot\n<span font='JetBrainsMono Nerd Font Mono'>󰚦 </span>Power Off" | rofi -dmenu -markup-rows -i -p "Session Options" -normal-window)
 
 case "$CHOICE" in
-    "󰌾   Lock")
+    "<span font='JetBrainsMono Nerd Font Mono'>󰌾 </span>Lock")
         hyprlock &
         ;;
-    "󰗽   Logout")
+    "<span font='JetBrainsMono Nerd Font Mono'>󰗽 </span>Logout")
         hyprctl dispatch exit
         ;;
-    "󰂠   Suspend")
+    "<span font='JetBrainsMono Nerd Font Mono'>󰂠 </span>Suspend")
         systemctl suspend
         ;;
-    "   Reboot")
+    "<span font='JetBrainsMono Nerd Font Mono'> </span>Reboot")
         systemctl reboot
         ;;
-    "󰚦   Power Off")
+    "<span font='JetBrainsMono Nerd Font Mono'>󰚦 </span>Power Off")
         systemctl poweroff
         ;;
     *)

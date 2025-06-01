@@ -10,18 +10,18 @@ fi
 
 CURRENT=$(cat "$BAT_PATH" 2>/dev/null || echo "Unknown")
 
-CHOICE=$(echo -e "󰂅   No Limit (Normal)\n󱧥   Limit to 80% (Extended Lifespan)\n󱈏   Limit to 60% (Maximum Health)" | rofi -dmenu -i -p "Charge Limit ($CURRENT%)" -normal-window)
+CHOICE=$(echo -e "<span font='JetBrainsMono Nerd Font Mono'>󰂅 </span>No Limit (Normal)\n<span font='JetBrainsMono Nerd Font Mono'>󱧥 </span>Limit to 80% (Extended Lifespan)\n<span font='JetBrainsMono Nerd Font Mono'>󱈏 </span>Limit to 60% (Maximum Health)" | rofi -dmenu -markup-rows -i -p "Charge Limit ($CURRENT%)" -normal-window)
 
 case "$CHOICE" in
-    "󰂅   No Limit (Normal)")
+    "<span font='JetBrainsMono Nerd Font Mono'>󰂅 </span>No Limit (Normal)")
         pkexec sh -c "echo 100 > '$BAT_PATH' && sed -i '/^CHARGE_THRESHOLD=/c\\CHARGE_THRESHOLD=100' '$CONFIG'" && \
         notify-send "Charge Limit" "Charging will now go up to 100%."
         ;;
-    "󱧥   Limit to 80% (Extended Lifespan)")
+    "<span font='JetBrainsMono Nerd Font Mono'>󱧥 </span>Limit to 80% (Extended Lifespan)")
         pkexec sh -c "echo 80 > '$BAT_PATH' && sed -i '/^CHARGE_THRESHOLD=/c\\CHARGE_THRESHOLD=80' '$CONFIG'" && \
         notify-send "Charge Limit" "Charging capped at 80% for extended lifespan."
         ;;
-    "󱈏   Limit to 60% (Maximum Health)")
+    "<span font='JetBrainsMono Nerd Font Mono'>󱈏 </span>Limit to 60% (Maximum Health)")
         pkexec sh -c "echo 60 > '$BAT_PATH' && sed -i '/^CHARGE_THRESHOLD=/c\\CHARGE_THRESHOLD=60' '$CONFIG'" && \
         notify-send "Charge Limit" "Charging capped at 60% for maximum health."
         ;;

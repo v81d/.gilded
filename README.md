@@ -70,7 +70,7 @@ Before installing these dotfiles, check for the packages below. Of course, you d
 
 ---
 
-For my setup, I used the **Adwaita** fonts (for most of the setup), **Nerd** fonts (for symbols and icons), and **Noto** fonts (to display other characters). You can choose to either install those or configure the fonts in the configuration files to your preferences.
+To replicate my exact setup, you must install the **Adwaita** fonts and the **JetBrains Mono Nerd Font**. If you want to use a different set of fonts, you must edit the configuration files.
 
 Credits to Nicholas Anand for the original [Dunst Media and Brightness Notifications](https://gitlab.com/Nmoleo/i3-volume-brightness-indicator) script. The script has been modified to align with the standards of this configuration.
 

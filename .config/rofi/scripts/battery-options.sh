@@ -1,15 +1,15 @@
 #!/bin/bash
 
-CHOICE=$(echo -e "   Charge Settings\n󱐋   Power Profiles\n󰐥   Session Options" | rofi -dmenu -i -p "Battery Options" -normal-window)
+CHOICE=$(echo -e "<span font='JetBrainsMono Nerd Font Mono'> </span>Charge Settings\n<span font='JetBrainsMono Nerd Font Mono'>󱐋 </span>Power Profiles\n<span font='JetBrainsMono Nerd Font Mono'>󰐥 </span>Session Options" | rofi -dmenu -markup-rows -i -p "Battery Options" -normal-window)
 
 case "$CHOICE" in
-    "   Charge Settings"*)
+    "<span font='JetBrainsMono Nerd Font Mono'> </span>Charge Settings"*)
         bash ~/.config/rofi/scripts/charge-settings.sh
         ;;
-    "󱐋   Power Profiles"*)
+    "<span font='JetBrainsMono Nerd Font Mono'>󱐋 </span>Power Profiles"*)
         bash ~/.config/rofi/scripts/power-profiles.sh
         ;;
-    "󰐥   Session Options"*)
+    "<span font='JetBrainsMono Nerd Font Mono'>󰐥 </span>Session Options"*)
         bash ~/.config/rofi/scripts/session-options.sh
         ;;
     *)
