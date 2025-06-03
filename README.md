@@ -59,13 +59,13 @@ Before installing these dotfiles, check for the packages below. Of course, you d
 | **hyprpicker** | A color picker for Wayland. Necessary to enable screen freezing with the `hyprshot` utility. |
 | **hyprshot** | A utility to easily take screenshots in Hyprland using your mouse. |
 | **kitty** | A GPU-accelerated terminal emulator focused on speed, features, and readability. |
-| **lxqt-policykit \*** | Graphical authentication agent for managing privileged actions in a desktop environment. |
+| **polkit-gnome \*** | Graphical authentication agent for managing privileged actions in a desktop environment. |
 | **rofi** | Versatile launcher used for app switching, commands, and more. |
 | **swaync \*\*** | A feature-rich and highly customizable notification center. |
 | **ttf-jetbrains-mono-nerd** | The JetBrains Mono Nerd Font families. |
 | **waybar** | A sleek and modular status bar for Wayland compositors like Sway and Hyprland. |
 
-\* You can use any other agent you prefer. If you do NOT use a policy kit agent, make sure to adjust the necessary settings in `hyprland.conf`.
+\* You can use any other policy kit agent you prefer. Make sure to adjust any necessary settings.
 
 ---
 
