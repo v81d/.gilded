@@ -67,8 +67,6 @@ Before installing these dotfiles, check for the packages below. Of course, you d
 
 \* You can use any other agent you prefer. If you do NOT use a policy kit agent, make sure to adjust the necessary settings in `hyprland.conf`.
 
-** As of Monday, May 26, 2025, Dunst has been replaced by Sway Notification Center. However, the Dunst configuration remains for you to use if you prefer it. To open the control center, simply click the clock module in your Waybar.
-
 ---
 
 To replicate my exact setup, you should install the **Adwaita** fonts and the **JetBrains Mono Nerd Font**. If you want to use a different set of fonts, you must edit the configuration files.
