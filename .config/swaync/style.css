@@ -12,9 +12,16 @@
     outline: unset;
 }
 
-scrollbar,
-.close-button {
+scrollbar {
     opacity: 0;
+}
+
+.close-button {
+    background-color: #383633;
+}
+
+.close-button:hover {
+    background-color: #43413f;
 }
 
 .floating-notifications .notification-row:first-child {
@@ -25,7 +32,7 @@ scrollbar,
     .notification-row
     .notification-background
     .notification {
-    box-shadow: 0px 3px 3px rgba(0, 0, 0, 0.25);
+    box-shadow: 0 3px 3px rgba(0, 0, 0, 0.25);
 }
 
 .notification-row .notification-background .notification button {
@@ -258,6 +265,7 @@ scrollbar,
     .notification
     .notification-content
     .summary {
+    margin-bottom: 5px;
     font-size: 14px;
     font-weight: 500;
 }
@@ -292,7 +300,6 @@ scrollbar,
     .body {
     font-size: 14px;
     font-weight: 400;
-    margin-top: 5px;
     padding-right: unset;
     margin-right: unset;
 }
@@ -316,7 +323,7 @@ scrollbar,
 .control-center {
     border-radius: 24px;
     -gtk-outline-radius: 24px;
-    box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.5);
+    box-shadow: 0 5px 5px rgba(0, 0, 0, 0.5);
     background-color: #120f0c;
     padding: 10px;
 }
