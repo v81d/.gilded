@@ -159,8 +159,9 @@ These two packages brought my power usage from about 17.0 watts to 11.7 watts id
 | **i915.enable_dc=2** | Enables deeper power saving for display hardware. Can cause instability or flickering on some systems. |
 | **i915.enable_fbc=1** | Compresses the framebuffer to reduce memory bandwidth. Can cause artifacts on some systems, but usually safe to try. |
 | **pcie_aspm=force** | Forces ASPM to be enabled even if BIOS disables it. Saves power during low activity, but can break devices on buggy firmware/hardware. |
+| **pcie_aspm.policy=powersupersave** | Controls PCIe ASPM policy via the kernel's module parameter (sysfs lever) at boot. Setting it to powersupersave enables the most aggressive power-saving mode. |
 
 These kernel settings decreased by idle power usage from about 11.7 watts to 7.5 watts idle, which is a massive boost in terms of battery life (around 5.5 hours to nearly 9 hours idle).
 If you plan to use these, please do so with caution. Remember to test these temporarily before you apply them permanently.
 * Note that the `i915` kernel parameters are only used for specific Intel graphics cards.
-* Furthermore, the `pcie_aspm=force` kernel parameter may be very risky on older hardware, as some PCIe devices (especially older or cheap Wi-Fi cards, NVMe SSDs, or certain USB controllers) do not handle ASPM correctly, even if they claim to support it.
+* Furthermore, the `pcie_aspm=force` and `pcie_aspm.policy=powersupersave` kernel parameters may be risky on older hardware, as some PCIe devices (especially older or cheap Wi-Fi cards, NVMe SSDs, or certain USB controllers) do not handle ASPM correctly, even if they claim to support it.
