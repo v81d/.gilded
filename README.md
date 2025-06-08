@@ -141,3 +141,26 @@ cat /sys/class/power_supply/BAT0/charge_control_end_threshold
 ```
 
 > **Note**: This feature requires kernel support for battery charge thresholds and may not work on all hardware. Make sure the battery path is correct. Adjust any scripts if necessary.
+
+## 🪫 Power Saving Tools
+
+Below is a list of power saving tools that I personally use to keep my power usage low. I am leaving this mostly as a note to myself, but you never know—someone may find this useful!
+
+| Package | Description |
+|-|-|
+| **Power Profiles Daemon** | A background service that manages system-wide power settings dynamically. Allows users and applications to switch between predefined power profiles (performance, balanced, and power-saver). |
+| **Thermald** | A daemon that monitors and controls system temperatures to prevent overheating. |
+
+These two packages brought my power usage from about 17.0 watts to 11.7 watts idle. However, I also discovered, after several months of tinkering, that the following kernel parameters can also significantly boost battery life:
+
+| Parameter | Description |
+|-|-|
+| **i915.enable_psr=2** | Saves power by stopping updates to the screen if nothing changes. Use with caution, as some monitors experience flickering issues with PSR2. |
+| **i915.enable_dc=2** | Enables deeper power saving for display hardware. Can cause instability or flickering on some systems. |
+| **i915.enable_fbc=1** | Compresses the framebuffer to reduce memory bandwidth. Can cause artifacts on some systems, but usually safe to try. |
+| **pcie_aspm=force** | Forces ASPM to be enabled even if BIOS disables it. Saves power during low activity, but can break devices on buggy firmware/hardware. |
+
+These kernel settings decreased by idle power usage from about 11.7 watts to 7.5 watts idle, which is a massive boost in terms of battery life (around 5.5 hours to nearly 9 hours idle).
+If you plan to use these, please do so with caution. Remember to test these temporarily before you apply them permanently.
+* Note that the `i915` kernel parameters are only used for specific Intel graphics cards.
+* Furthermore, the `pcie_aspm=force` kernel parameter may be very risky on older hardware, as some PCIe devices (especially older or cheap Wi-Fi cards, NVMe SSDs, or certain USB controllers) do not handle ASPM correctly, even if they claim to support it.
