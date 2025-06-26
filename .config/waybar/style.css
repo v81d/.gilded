@@ -24,16 +24,7 @@ window#waybar {
     padding-left: 15px;
     padding-right: 15px;
     border-radius: 12px;
-    background: rgba(105, 91, 72, 0.6);
-    color: #ebdbb2;
-}
-
-/* Workspaces container */
-#workspaces {
-    margin-top: 20px;
-    margin-right: 5px;
     padding: 5px 5px 5px 0;
-    border-radius: 12px;
     background: rgba(105, 91, 72, 0.6);
 }
 
@@ -74,8 +65,7 @@ window#waybar {
     padding-right: 15px;
     border-radius: 12px;
     background: rgba(105, 91, 72, 0.6);
-    color: #ebdbb2;
-}
+    color: #ebdbb2;}
 
 /* Hover effect for clickable modules */
 #workspaces button:hover,
