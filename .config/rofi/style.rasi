@@ -32,7 +32,7 @@ mainbox {
 
 inputbar {
     color: @foreground-main;
-    padding: 14px;
+    padding: 15px;
     background-color: @background-main;
 }
 
@@ -42,11 +42,9 @@ message {
 }
 
 listview {
-    columns: 2;
-    spacing: 8px;
-    padding: 8px;
+    spacing: 10px;
+    padding: 10px;
     background-color: @background-main;
-    dynamic: false;
 }
 
 textbox {
