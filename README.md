@@ -49,7 +49,7 @@ Before installing these dotfiles, check for the packages below. Of course, you d
 
 | Package | Description |
 |-|-|
-| **adw-gtk-theme** | The theme from Libadwaita ported to GTK3. |
+| **adw-gtk-theme** | The theme from Libadwaita ported to GTK 3. |
 | **bc** | Precision-friendly command-line calculator for complex and floating-point math. |
 | **brightnessctl** | Command-line utility to read and adjust screen brightness using sysfs. |
 | **fastfetch** | Blazing-fast system info tool for the terminal, with customizable ASCII logos. |
@@ -64,8 +64,7 @@ Before installing these dotfiles, check for the packages below. Of course, you d
 | **swaync \*\*** | A feature-rich and highly customizable notification center. |
 | **ttf-jetbrains-mono-nerd** | The JetBrains Mono Nerd Font families. |
 | **waybar** | A sleek and modular status bar for Wayland compositors like Sway and Hyprland. |
-| **qt5ct, qt6ct, kvantum** | Tools that allow you to change the theme of Qt applications. |
-| **xdg-desktop-portal-gtk** | A backend implementation for xdg-desktop-portal that is using GTK and various pieces of GNOME infrastructure. |
+| **xdg-desktop-portal-gtk** | A backend implementation for xdg-desktop-portal that uses GTK and various pieces of GNOME infrastructure. |
 
 \* You can use any other policy kit agent you prefer. Make sure to adjust any necessary settings.
 
