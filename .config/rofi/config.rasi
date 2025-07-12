@@ -1,0 +1,11 @@
+configuration {
+    display-ssh: "SSH";
+    display-run: "Run";
+    display-drun: "Applications";
+    display-window: "Window";
+    display-combi: "Combi";
+    show-icons: false;
+    font: "Adwaita Sans 12";
+}
+
+@theme "~/.config/rofi/style.rasi"

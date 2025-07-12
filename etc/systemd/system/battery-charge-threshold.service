@@ -1,0 +1,11 @@
+[Unit]
+Description=Battery Charge Threshold Setup
+After=systemd-remount-fs.service
+
+[Service]
+Type=oneshot
+ExecStart=/bin/sh -c 'BAT_PATH="/sys/class/power_supply/BAT0/charge_control_end_threshold"; if [ -f "$BAT_PATH" ]; then . /etc/default/battery_charge_threshold; echo $CHARGE_THRESHOLD > "$BAT_PATH"; fi'
+RemainAfterExit=yes
+
+[Install]
+WantedBy=multi-user.target

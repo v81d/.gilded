@@ -1,0 +1,51 @@
+[global]
+    origin = "top-center"
+    offset = (0, 10)
+    
+    width = (350, 350)
+    height = (0, 100)
+    notification_limit = 3
+    
+    icon_path = "/usr/share/icons/Adwaita/16x16/status/:/usr/share/icons/Adwaita/16x16/devices/:/usr/share/pixmaps/:/usr/share/icons/hicolor/48x48/apps/"
+    enable_recursive_icon_lookup = true
+    max_icon_size = 48
+    
+    horizontal_padding = 24
+    text_icon_padding = 12
+    padding = 16
+    
+    corner_radius = 12
+    frame_width = 0
+    separator_color = "#928374"
+    
+    font = "Adwaita Sans 12"
+    markup = "yes"
+    format = "<b>%s</b>\n%b"
+    
+    progress_bar_height = 12
+    progress_bar_frame_width = 1
+    progress_bar_corner_radius = 6
+
+[urgency_low]
+    background = "#695b4899"
+    foreground = "#ffdeb0"
+    frame_color = "#ffdeb0"
+    highlight = "#ffdeb0"
+    
+    timeout = 5
+
+[urgency_normal]
+    background = "#695b4899"
+    foreground = "#ffdeb0"
+    frame_color = "#ffdeb0"
+    highlight = "#ffdeb0"
+    
+    timeout = 5
+
+[urgency_critical]
+    background = "#90535399"
+    foreground = "#ffb0b0"
+    frame_color = "#ffb0b0"
+    highlight = "#ffb0b0"
+    
+    timeout = 10
