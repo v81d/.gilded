@@ -26,7 +26,6 @@
     // Module settings
 
     "hyprland/workspaces": {
-        "on-click": "activate",
         "format": "{name}",
         "format-activated": "{name}",
         "format-urgent": "{name}"
