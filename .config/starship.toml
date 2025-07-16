@@ -24,11 +24,11 @@ time = "#6e5a31"
 node = "#9ea75f"
 git = "#607036"
 git_status = "#435418"
-python = "#9ca967"
-conda = "#9aa15f"
-java = "#a4593a"
-rust = "#c46b3f"
-clang = "#5e6a6c"
+python = "#59440c"
+conda = "#314f2f"
+java = "#5c3712"
+rust = "#692707"
+clang = "#284145"
 duration = "#4f4a33"
 text_color = "#dcdcb5"
 text_light = "#7a765e"
@@ -133,10 +133,10 @@ format       = "([ ](fg:git_status)[$all_status$ahead_behind]($style)[](fg
 style        = "fg:text_color bg:git_status"
 
 [python]
-format           = "[ ](fg:python)[${symbol}${pyenv_prefix}(${version} )(\\($virtualenv\\))]($style)[](fg:python)"
+format           = "[ ](fg:python)[${symbol}${pyenv_prefix}(${version})(\\($virtualenv\\))]($style)[](fg:python)"
 symbol           = " "
 version_format   = "${raw}"
-style            = "fg:text_light bg:python"
+style            = "fg:text_color bg:python"
 disabled         = false
 
 [conda]
