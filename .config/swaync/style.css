@@ -1,0 +1,358 @@
+/* **************************************** */
+/* BASE STYLES ---------------------------- */
+/* **************************************** */
+
+
+* {
+    /* Root variables */
+    --notification-icon-size: 40px;
+    --mpris-album-art-icon-size: 64px;
+
+    /* Root styles */
+    font-size: 14px;
+    font-family: Adwaita Sans;
+    transition: 200ms;
+    box-shadow: unset;
+    text-shadow: unset;
+    border: unset;
+    outline: unset;
+}
+
+scrollbar {
+    opacity: 0;
+}
+
+
+/* **************************************** */
+/* CONTROL CENTER PANEL ------------------- */
+/* **************************************** */
+
+
+.control-center {
+    border-radius: 24px;
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.5);
+    background-color: #282828;
+    padding: 15px;
+    border-top: 0.25px solid #c2b6a7;
+}
+
+/* TITLE WIDGET */
+
+.widget-title {
+    padding: 20px;
+}
+
+.widget-title label {
+    font-weight: bold;
+    font-size: 24px;
+    color: #e6e4e1;
+}
+
+.widget-title button {
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 24px;
+    padding: 4px;
+    border-top: 0.25px solid #e6e4e1;
+}
+
+.widget-title button label {
+    font-weight: normal;
+    font-size: 16px;
+    color: #e6e4e1;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+.widget-title button:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+.widget-title button:active {
+    background-color: rgba(255, 255, 255, 0.4);
+}
+
+/* MPRIS WIDGET */
+
+.widget-mpris {
+    margin-top: 10px;
+    margin-left: 8px;
+    margin-right: 8px;
+    background: unset;
+}
+
+.widget-mpris .widget-mpris-player {
+    border-top: 0.25px solid rgba(255, 255, 255, 0.4);
+}
+
+.widget-mpris .widget-mpris-player .mpris-overlay button {
+    color: #e6e4e1;
+    background: unset;
+    border-top: 0.25px solid rgba(255, 255, 255, 0);
+}
+
+.widget-mpris .widget-mpris-player .mpris-overlay button:disabled {
+    color: #858585;
+}
+
+.widget-mpris .widget-mpris-player .mpris-overlay button:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+    border-top: 0.25px solid rgba(255, 255, 255, 1);
+}
+
+.widget-mpris .widget-mpris-player .mpris-overlay button:active {
+    background-color: rgba(255, 255, 255, 0.4);
+}
+
+.widget-mpris-title {
+    font-weight: bold;
+    font-size: 18px;
+    color: #e6e4e1;
+}
+
+.widget-mpris-subtitle {
+    font-size: 14px;
+    color: #e6e4e1;
+}
+
+
+/* **************************************** */
+/* NOTIFICATION STYLES -------------------- */
+/* **************************************** */
+
+
+/* FLOATING NOTIFICATIONS */
+
+.floating-notifications .notification-row:first-child {
+    margin-top: 14px;
+}
+
+.floating-notifications .notification-row .notification-background .notification {
+    box-shadow: 0 2px 2px rgba(0, 0, 0, 0.5);
+}
+
+/* NOTIFICATION BACKGROUNDS */
+
+.notification-row .notification-background .notification.low,
+.notification-row .notification-background .notification.normal {
+    background-color: #323232;
+}
+
+.notification-row .notification-background .notification.critical {
+    background-color: #403a32;
+}
+
+/* NOTIFICATION CONTENT BACKGROUND */
+
+.floating-notifications.background .notification-background .notification .notification-content,
+.control-center .notification-background .notification .notification-content {
+    background-color: #323232;
+    padding: 13px;
+}
+
+/* NOTIFICATION TEXT COLORS - LOW/NORMAL */
+
+.control-center .notification-row .notification-background .notification.low .notification-content label,
+.control-center .notification-row .notification-background .notification.normal .notification-content label,
+.floating-notifications.background .notification-background .notification.low .notification-content label,
+.floating-notifications.background .notification-background .notification.normal .notification-content label {
+    color: #d0cbc5;
+}
+
+.control-center .notification-row .notification-background .notification.low .notification-content .body,
+.control-center .notification-row .notification-background .notification.normal .notification-content .body,
+.floating-notifications.background .notification-background .notification.low .notification-content .body,
+.floating-notifications.background .notification-background .notification.normal .notification-content .body {
+    color: #9a9691;
+}
+
+.control-center .notification-row .notification-background .notification .notification-content image,
+.control-center .notification-row .notification-background .notification.normal .notification-content image,
+.floating-notifications.background .notification-background .notification.low .notification-content image,
+.floating-notifications.background .notification-background .notification.normal .notification-content image {
+    background: unset;
+    color: #f9efe0;
+    margin-left: 5px;
+}
+
+/* NOTIFICATION TEXT COLORS - CRITICAL */
+
+.control-center .notification-row .notification-background .notification.critical .notification-content,
+.floating-notifications.background .notification-background .notification.critical .notification-content,
+.notification.critical .notification-default-action {
+    background-color: #403a32;
+}
+
+.control-center .notification-row .notification-background .notification.critical .notification-content label,
+.floating-notifications.background .notification-background .notification.critical .notification-content label {
+    color: #fcecd4;
+}
+
+.control-center .notification-row .notification-background .notification.critical .notification-content .body,
+.floating-notifications.background .notification-background .notification.critical .notification-content .body {
+    color: #c2b6a7;
+}
+
+.control-center .notification-row .notification-background .notification.critical .notification-content image,
+.floating-notifications.background .notification-background .notification.critical .notification-content image {
+    background: unset;
+    color: #d9ccbd;
+}
+
+/* TEXT */
+
+.control-center .notification-row .notification-background .notification .notification-content .summary,
+.floating-notifications.background .notification-background .notification .notification-content .summary {
+    margin-left: 5px;
+    margin-bottom: 5px;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.control-center .notification-row .notification-background .notification .notification-content .time,
+.floating-notifications.background .notification-background .notification .notification-content .time {
+    font-size: 12px;
+    font-weight: normal;
+    margin-right: 5px;
+    padding-right: unset;
+}
+
+.control-center .notification-row .notification-background .notification .notification-content .body,
+.floating-notifications.background .notification-background .notification .notification-content .body {
+    margin-left: 5px;
+    font-size: 14px;
+    font-weight: 400;
+}
+
+.control-center .notification-row {
+    background: unset;
+}
+
+.control-center .notification-row .notification-background .notification {
+    margin-top: 2px;
+}
+
+/* CLOSE BUTTON */
+
+.close-button {
+    background-color: rgba(255, 255, 255, 0.1);
+    border-top: 0.25px solid white;
+}
+
+.close-button:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+.close-button:active {
+    background-color: rgba(255, 255, 255, 0.4);
+}
+
+/* NOTIFICATION GROUPS */
+
+.control-center-list {
+    margin: 15px;
+}
+
+.control-center-list > .notification-group:not(:first-child):not(.collapsed) {
+    margin-top: 20px;
+}
+
+.notification-group {
+    background: unset;
+}
+
+.notification-group .notification-group-headers,
+.notification-group .notification-group-buttons {
+    margin-bottom: 10px;
+}
+
+.notification-group .notification-group-headers > * {
+    color: #bdbdbd;
+}
+
+.notification-group .notification-group-headers > *:nth-child(2) {
+    margin-left: 5px;
+}
+
+.notification-group .notification-group-buttons > * {
+    margin-left: 5px;
+    color: #bdbdbd;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-top: 0.25px solid rgba(255, 255, 255, 1);
+}
+
+.notification-group .notification-group-buttons > *:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+.notification-group .notification-group-buttons > *:active {
+    background-color: rgba(255, 255, 255, 0.4);
+}
+
+
+/* **************************************** */
+/* PROGRESS BAR --------------------------- */
+/* **************************************** */
+
+
+.notification-row progressbar {
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+.notification-row progressbar trough {
+    border-top: 0.25px solid #c2b6a7;
+    background-color: #454545;
+    border-radius: 3px;
+    min-height: 6px;
+}
+
+.notification-row progressbar trough progress {
+    background-color: #987454;
+    border-radius: 3px;
+    min-height: 6px;
+}
+
+
+/* **************************************** */
+/* NOTIFICATION ACTION BUTTONS ------------ */
+/* **************************************** */
+
+
+/* LOW & NORMAL */
+
+.notification-background .notification.low .notification-default-action,
+.notification-background .notification.normal .notification-default-action,
+.notification-background .notification.low .notification-action,
+.notification-background .notification.normal .notification-action {
+    background-color: #323232;
+    border-top: 0.25px solid #9a9691;
+    color: #9a9691;
+}
+
+.notification-background .notification.low .notification-action:hover,
+.notification-background .notification.normal .notification-action:hover {
+    background-color: #404040;
+}
+
+.notification-background .notification.low .notification-action:active,
+.notification-background .notification.normal .notification-action:active {
+    background-color: #565656;
+}
+
+/* CRITICAL */
+
+.notification-background .notification.critical .notification-default-action,
+.notification-background .notification.critical .notification-action {
+    background-color: #403a32;
+    border-top: 0.25px solid #c2b6a7;
+    color: #c2b6a7;
+}
+
+.notification-background .notification.critical .notification-action:hover {
+    background-color: #4f483e;
+}
+
+.notification-background .notification.critical .notification-action:active {
+    background-color: #706658;
+}
+

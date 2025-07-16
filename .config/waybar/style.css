@@ -1,0 +1,108 @@
+/*
+ * .gilded theme created by v81d
+ */
+
+* {
+    min-height: 0;
+    border: none;
+    font-family: "Adwaita Sans", sans-serif;
+    font-weight: bold;
+    font-size: 12px;
+    transition: background 500ms ease;
+    box-shadow: none;
+    text-shadow: none;
+}
+
+window#waybar {
+    background: none;
+}
+
+#workspaces {
+    margin-top: 20px;
+    margin-left: 20px;
+    margin-right: 5px;
+    padding-left: 15px;
+    padding-right: 15px;
+    border-radius: 12px;
+    padding: 5px 5px 5px 0;
+    background: rgba(105, 91, 72, 0.6);
+    border-top: 0.5px solid #ebdbb2;
+}
+
+/* Individual workspace buttons */
+#workspaces button {
+    padding-left: 5px;
+    padding-right: 5px;
+    margin-left: 5px;
+    border-radius: 12px;
+    color: #9c8c5f;
+    transition: all 500ms ease;
+    border-top: 0.5px solid rgba(255, 255, 255, 0);
+}
+
+/* Active workspace */
+#workspaces button.active {
+    color: #ebdbb2;
+    padding-left: 15px;
+    padding-right: 15px;
+    background: rgba(163, 139, 106, 0.4);
+    border-top: 0.5px solid #ebdbb2;
+}
+
+/* Urgent workspace */
+#workspaces button.urgent {
+    color: #ffb8b8;
+}
+
+/* Common module styling for various elements */
+#window,
+#mpris,
+#clock,
+#pulseaudio,
+#network,
+#language,
+#battery {
+    margin-top: 20px;
+    margin-right: 5px;
+    padding-left: 15px;
+    padding-right: 15px;
+    border-radius: 12px;
+    background: rgba(105, 91, 72, 0.6);
+    color: #ebdbb2;
+    border-top: 0.5px solid #ebdbb2;
+}
+
+/* Hover effect for clickable modules */
+#workspaces button:hover,
+#window:hover,
+#mpris:hover,
+#clock:hover,
+#pulseaudio:hover,
+#network:hover,
+#battery:hover {
+    background: rgba(163, 139, 106, 0.4);
+}
+
+#battery {
+    margin-right: 20px;
+}
+
+#battery.charging,
+#battery.plugged {
+    background: rgba(199, 139, 56, 0.4);
+}
+
+@keyframes blink {
+    to {
+        background: none;
+    }
+}
+
+#battery.critical:not(.charging) {
+    background: #cc241d;
+    animation-name: blink;
+    animation-duration: 500ms;
+    animation-timing-function: steps(50);
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}

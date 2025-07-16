@@ -1,0 +1,136 @@
+// -*- mode: jsonc -*-
+{
+    // Bar configuration
+
+    "layer": "bottom",
+    "position": "top",
+    "spacing": 5,
+
+    // Module positioning
+
+    "modules-left": [
+        "hyprland/workspaces",
+        "hyprland/window"
+    ],
+    "modules-center": [
+        "mpris",
+        "clock"
+    ],
+    "modules-right": [
+        "hyprland/language",
+        "network",
+        "pulseaudio",
+        "battery"
+    ],
+
+    // Module settings
+
+    "hyprland/workspaces": {
+        "on-click": "activate",
+        "format": "{name}",
+        "format-activated": "{name}",
+        "format-urgent": "{name}"
+    },
+    "hyprland/window": {
+        "format": "{title}",
+        "max-length": 30,
+        "icon": true,
+        "icon-size": 12,
+        "rewrite": {
+            "": "<span font='JetBrainsMono Nerd Font Mono'>󰧨 </span>Desktop"
+        },
+        "tooltip": false,
+        "on-click": "rofi -show drun -normal-window -show-icons &"
+    },
+    "mpris": {
+        "format": "<span font='JetBrainsMono Nerd Font Mono'>{status_icon} </span>{title}",
+        "status-icons": {
+            "playing": "",
+            "paused": ""
+        },
+        "max-length": 30,
+        "tooltip": false,
+        "interval": 1
+    },
+    "clock": {
+        "format": "<span font='JetBrainsMono Nerd Font Mono'>󰃭 </span>{:%a %b %d    %H:%M}",
+        "tooltip": false,
+        "on-click": "swaync-client -t"
+    },
+    "hyprland/language": {
+        "format": "<span font='JetBrainsMono Nerd Font Mono'>󰌌 </span>{}"
+    },
+    "network": {
+        "format-disconnected": "<span font='JetBrainsMono Nerd Font Mono'>󰤮 </span>Disconnected",
+        "format-wifi": "<span font='JetBrainsMono Nerd Font Mono'>{icon} </span>{essid}",
+        "format-ethernet": "<span font='JetBrainsMono Nerd Font Mono'> </span>{ipaddr}/{cidr}",
+        "format-icons": [
+            "󰤯",
+            "󰤟",
+            "󰤢",
+            "󰤥",
+            "󰤨"
+        ],
+        "tooltip": false,
+        "on-click": "bash ~/.config/rofi/scripts/network-options.sh &"
+    },
+    "pulseaudio": {
+        "format": "<span font='monospace'>{icon} </span>{volume}%",
+        "format-muted": "<span font='JetBrainsMono Nerd Font Mono'>󰝟 </span>Muted",
+        "format-icons": {
+            "headphones": "",
+            "handsfree": "",
+            "headset": "",
+            "phone": "",
+            "phone-muted": "",
+            "portable": "",
+            "car": "",
+            "default": [
+                "󰕿",
+                "󰖀",
+                "󰕾"
+            ]
+        },
+        "on-click": "pavucontrol",
+        "on-click-middle": "bash ~/.config/hypr/scripts/media-notify.sh volume_mute",
+        "on-scroll-up": "bash ~/.config/hypr/scripts/media-notify.sh volume_up",
+        "on-scroll-down": "bash ~/.config/hypr/scripts/media-notify.sh volume_down"
+    },
+    "battery": {
+        "states": {
+            "good": 80,
+            "warning": 20,
+            "critical": 10
+        },
+        "interval": 5,
+        "format": "<span font='JetBrainsMono Nerd Font Mono'>{icon} </span>{capacity}%",
+        "format-icons": {
+            "charging": [
+                "󰢜",
+                "󰂆",
+                "󰂇",
+                "󰂈",
+                "󰢝",
+                "󰂉",
+                "󰢞",
+                "󰂊",
+                "󰂋",
+                "󰂅"
+            ],
+            "default": [
+                "󰁺",
+                "󰁻",
+                "󰁼",
+                "󰁽",
+                "󰁾",
+                "󰁿",
+                "󰂀",
+                "󰂁",
+                "󰂂",
+                "󰁹"
+            ]
+        },
+        "on-click": "bash ~/.config/rofi/scripts/battery-options.sh &"
+    }
+}
+
