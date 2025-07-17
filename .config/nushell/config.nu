@@ -3,7 +3,7 @@
 ##############################################
 
 
-# Transient prompt
+# TRANSIENT PROMPT
 $env.TRANSIENT_PROMPT_COMMAND = "❯ "
 $env.TRANSIENT_PROMPT_MULTILINE_INDICATOR = "∙ "
 
@@ -13,8 +13,19 @@ $env.TRANSIENT_PROMPT_MULTILINE_INDICATOR = "∙ "
 ##############################################
 
 
+# REPLACEMENT COMMANDS
 alias cat = bat  # Use bat instead of cat
-# zoxide aliased as cd (change directory) in env.nu
+
+# COMMON USE
+alias grubup = sudo grub-mkconfig -o /boot/grub/grub.cfg
+alias fixpacman = sudo rm /var/lib/pacman/db.lck
+alias tarnow = tar -acf 
+alias untar = tar -zxvf 
+alias wget = wget -c
+
+# PACKAGE MANAGEMENT
+alias update = sudo pacman -Syu
+alias cleanup = sudo pacman -Rns (pacman -Qtdq)
 
 
 ##############################################
@@ -22,14 +33,14 @@ alias cat = bat  # Use bat instead of cat
 ##############################################
 
 
-# Initialize Starship
+# INITIALIZE STARSHIP
 mkdir ($nu.data-dir | path join "vendor/autoload")
 starship init nu | save -f ($nu.data-dir | path join "vendor/autoload/starship.nu")
 
-# Initialize Zoxide
+# INITIALIZE ZOXIDE
 source ~/.zoxide.nu
 
-# Startup commands
+# STARTUP COMMANDS
 clear
 fastfetch
 
