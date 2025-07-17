@@ -6,10 +6,10 @@
     "control-center-margin-left": 0,
     "control-center-margin-right": 0,
     "control-center-margin-top": 20,
-    "control-center-width": 500,
-    "cssPriority": "application",
     "control-center-positionX": "center",
     "control-center-positionY": "top",
+    "control-center-width": 500,
+    "cssPriority": "application",
     "fit-to-screen": false,
     "hide-on-action": false,
     "image-visibility": "when-available",
@@ -28,15 +28,15 @@
     "transition-time": 200,
     "widget-config": {
         "mpris": {
-            "image-radius": 24,
             "blacklist": [
                 "playerctld"
-            ]
+            ],
+            "image-radius": 24
         },
         "title": {
-            "text": "Notifications",
             "button-text": "Clear",
-            "clear-all-button": true
+            "clear-all-button": true,
+            "text": "Notifications"
         }
     },
     "widgets": [
