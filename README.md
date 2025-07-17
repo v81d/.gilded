@@ -53,7 +53,6 @@ Before installing these dotfiles, check for the packages below. Of course, you d
 | **adw-gtk-theme** | The Adwaita theme ported to GTK 3. |
 | **bc** | A precision-friendly command-line calculator for complex and floating-point math. |
 | **brightnessctl** | A command-line utility to read and adjust screen brightness using sysfs. |
-| **fastfetch** | A blazing-fast system info tool for the terminal, with customizable ASCII logos. |
 | **hypridle (optional)** | Hyprland's official idle management daemon. |
 | **hyprland** | A dynamic tiling Wayland compositor with modern effects and flexible configuration. |
 | **hyprlock** | A highly customizable GPU-accelerated screen lock for Hyprland. |
@@ -61,10 +60,8 @@ Before installing these dotfiles, check for the packages below. Of course, you d
 | **hyprpicker** | A color picker for Wayland. Necessary to enable screen freezing with the `hyprshot` utility. |
 | **hyprshot** | A utility to easily take screenshots in Hyprland using your mouse. |
 | **kitty** | A GPU-accelerated terminal emulator focused on speed, features, and readability. |
-| **nushell** | A modern shell that combines the power of traditional shells with structured data. |
 | **polkit-gnome** | A graphical authentication agent for managing privileged actions in a desktop environment. |
 | **rofi** | A versatile launcher used for app switching, commands, and more. |
-| **starship** | A fast, minimal, and highly customizable prompt engine for any shell. |
 | **swaync** | A feature-rich and highly customizable notification center. |
 | **ttf-jetbrains-mono-nerd** | The JetBrains Mono Nerd font family. |
 | **waybar** | A sleek and modular status bar for Wayland compositors like Hyprland. |
