@@ -1,4 +1,4 @@
-# ✨ .gilded
+# .gilded
 
 A collection of my personal dotfiles and configurations for a sleek and minimalistic Linux desktop using [Hyprland](https://hypr.land). Inspired by Gruvbox and Twilight.
 
@@ -41,7 +41,7 @@ A collection of my personal dotfiles and configurations for a sleek and minimali
     </tr>
 </table>
 
-## 🛠️ Installation
+## Installation
 
 ### Prerequisites
 
@@ -111,7 +111,7 @@ sudo reboot
 
 > Make sure to change paths and file directories to align with your setup.
 
-## 🔋 Battery Charge Threshold (Integration with Rofi)
+## Battery Charge Threshold (Integration with Rofi)
 
 I included this service here in case anyone would like to use it. Below are the instructions to install.
 
@@ -148,7 +148,7 @@ cat /sys/class/power_supply/BAT0/charge_control_end_threshold
 
 > **Note**: This feature requires kernel support for battery charge thresholds and may not work on all hardware. Make sure the battery path above is correct and adjust any scripts if necessary.
 
-## 🪫 Power-Saving Tools
+## Power-Saving Tools
 
 Below is a list of power-saving tools that I personally use to keep my power usage low.
 
